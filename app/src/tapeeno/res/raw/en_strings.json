@@ -1,0 +1,1232 @@
+{
+  "strings": [
+    {
+      "key": "app_name_phos",
+      "value": "Phos"
+    },
+    {
+      "key": "app_name_computop",
+      "value": "Computop"
+    },
+    {
+      "key": "description_splash_logo",
+      "value": ""
+    },
+    {
+      "key": "description_splash_bottom_text",
+      "value": ""
+    },
+    {
+      "key": "security_check",
+      "value": "Security check.\nPlease wait."
+    },
+    {
+      "key": "forgot_password",
+      "value": "Forgot your password?"
+    },
+    {
+      "key": "login",
+      "value": "Log in"
+    },
+    {
+      "key": "signup",
+      "value": "Sign Up"
+    },
+    {
+      "key": "email",
+      "value": "E-Mail"
+    },
+    {
+      "key": "password",
+      "value": "Password"
+    },
+    {
+      "key": "err_msg_email",
+      "value": "Invalid E-mail recipient"
+    },
+    {
+      "key": "err_msg_password",
+      "value": "Invalid password"
+    },
+    {
+      "key": "response_code_1000",
+      "value": "Something went wrong. Please, contact us."
+    },
+    {
+      "key": "response_code_1003",
+      "value": "Invalid credentials"
+    },
+    {
+      "key": "response_code_5007",
+      "value": "Unsupported App Version"
+    },
+    {
+      "key": "response_code_11001",
+      "value": "The new password is either too short or is the same as the old password"
+    },
+    {
+      "key": "err_msg_too_short_new_password",
+      "value": "The new password is too short."
+    },
+    {
+      "key": "err_msg_password_must_be_different",
+      "value": "The new password must be different from the old password."
+    },
+    {
+      "key": "response_code_14000",
+      "value": "Wrong credentials"
+    },
+    {
+      "key": "retry_msg",
+      "value": "Error while loading data\nPlease, check your internet connection and try again."
+    },
+    {
+      "key": "no_records_found_filter",
+      "value": "No records found, based on the flter you have set."
+    },
+    {
+      "key": "no_records_found",
+      "value": "No records found"
+    },
+    {
+      "key": "dashboard",
+      "value": "Dashboard"
+    },
+    {
+      "key": "day_1",
+      "value": "Mon"
+    },
+    {
+      "key": "day_2",
+      "value": "Tue"
+    },
+    {
+      "key": "day_3",
+      "value": "Wed"
+    },
+    {
+      "key": "day_4",
+      "value": "Thu"
+    },
+    {
+      "key": "day_5",
+      "value": "Fri"
+    },
+    {
+      "key": "day_6",
+      "value": "Sat"
+    },
+    {
+      "key": "day_7",
+      "value": "Sun"
+    },
+    {
+      "key": "sales",
+      "value": "Sale"
+    },
+    {
+      "key": "transactions",
+      "value": "Transactions"
+    },
+    {
+      "key": "loyalty",
+      "value": "Loyalty"
+    },
+    {
+      "key": "analytics",
+      "value": "Analytics"
+    },
+    {
+      "key": "monthly_sales",
+      "value": "Monthly sales"
+    },
+    {
+      "key": "daily_sales",
+      "value": "Daily sales"
+    },
+    {
+      "key": "settings",
+      "value": "Settings"
+    },
+    {
+      "key": "printers",
+      "value": "Printers"
+    },
+    {
+      "key": "btn_refund",
+      "value": "Refund"
+    },
+    {
+      "key": "btn_sale",
+      "value": "Sale"
+    },
+    {
+      "key": "btn_void",
+      "value": "Void"
+    },
+    {
+      "key": "btn_make_sale",
+      "value": "Confirm"
+    },
+    {
+      "key": "btn_make_refund",
+      "value": "Refund"
+    },
+    {
+      "key": "btn_next",
+      "value": "Next"
+    },
+    {
+      "key": "btn_make_void",
+      "value": "Void"
+    },
+    {
+      "key": "date",
+      "value": "Date"
+    },
+    {
+      "key": "type",
+      "value": "Type"
+    },
+    {
+      "key": "status",
+      "value": "Status"
+    },
+    {
+      "key": "type_all",
+      "value": "All"
+    },
+    {
+      "key": "type_payment",
+      "value": "Sale"
+    },
+    {
+      "key": "type_refund",
+      "value": "Refund"
+    },
+    {
+      "key": "type_void",
+      "value": "Void"
+    },
+    {
+      "key": "status_successful",
+      "value": "Approved"
+    },
+    {
+      "key": "status_pending",
+      "value": "Pending"
+    },
+    {
+      "key": "status_failed",
+      "value": "Declined"
+    },
+    {
+      "key": "log_out",
+      "value": "Log out"
+    },
+    {
+      "key": "merchant_profile",
+      "value": "Merchant profile"
+    },
+    {
+      "key": "company_data",
+      "value": "Company data"
+    },
+    {
+      "key": "bank_account_data",
+      "value": "Bank account data"
+    },
+    {
+      "key": "tariff_data",
+      "value": "Tariff"
+    },
+    {
+      "key": "country",
+      "value": "Country"
+    },
+    {
+      "key": "city",
+      "value": "City"
+    },
+    {
+      "key": "address",
+      "value": "Address"
+    },
+    {
+      "key": "language",
+      "value": "Language"
+    },
+    {
+      "key": "printers_select",
+      "value": "Please, select printer…"
+    },
+    {
+      "key": "iban",
+      "value": "IBAN"
+    },
+    {
+      "key": "bank",
+      "value": "Bank name"
+    },
+    {
+      "key": "currency",
+      "value": "Currency"
+    },
+    {
+      "key": "lang_english",
+      "value": "English"
+    },
+    {
+      "key": "lang_bulgarian",
+      "value": "Български"
+    },
+    {
+      "key": "lang_german",
+      "value": "Deutsch"
+    },
+    {
+      "key": "lang_spanish",
+      "value": "Español"
+    },
+    {
+      "key": "lang_finnish",
+      "value": "Suomi"
+    },
+    {
+      "key": "lang_latvian",
+      "value": "latviešu"
+    },
+    {
+      "key": "lang_greek",
+      "value": "Ελληνικά"
+    },
+    {
+      "key": "lang_hebrew",
+      "value": "עִבְרִית"
+    },
+    {
+      "key": "lang_dutch",
+      "value": "Nederlands"
+    },
+    {
+      "key": "lang_polish",
+      "value": "polski"
+    },
+    {
+      "key": "lang_portuguese",
+      "value": "Português"
+    },
+    {
+      "key": "lang_romanian",
+      "value": "Română"
+    },
+    {
+      "key": "daily",
+      "value": "Daily"
+    },
+    {
+      "key": "weekly",
+      "value": "Weekly"
+    },
+    {
+      "key": "monthly",
+      "value": "Monthly"
+    },
+    {
+      "key": "net_sales",
+      "value": "Net sales"
+    },
+    {
+      "key": "avg_sales",
+      "value": "Average sale"
+    },
+    {
+      "key": "amount",
+      "value": "Amount"
+    },
+    {
+      "key": "enter_pin1",
+      "value": "Enter PIN"
+    },
+    {
+      "key": "enter_pin2",
+      "value": "to authorize transaction"
+    },
+    {
+      "key": "sale_success",
+      "value": "Payment is successful!"
+    },
+    {
+      "key": "void_success",
+      "value": "Void is successful!"
+    },
+    {
+      "key": "refund_success",
+      "value": "Refund is successful!"
+    },
+    {
+      "key": "print",
+      "value": "Print"
+    },
+    {
+      "key": "phone",
+      "value": "Phone"
+    },
+    {
+      "key": "mobile_phone",
+      "value": "Mobile phone"
+    },
+    {
+      "key": "sms",
+      "value": "SMS"
+    },
+    {
+      "key": "send_to",
+      "value": "Send receipt to:"
+    },
+    {
+      "key": "leave_a_tip",
+      "value": "Would you like\nto leave a tip ?"
+    },
+    {
+      "key": "tip",
+      "value": "Tip"
+    },
+    {
+      "key": "close",
+      "value": "Close"
+    },
+    {
+      "key": "skip",
+      "value": "Skip"
+    },
+    {
+      "key": "send",
+      "value": "Send"
+    },
+    {
+      "key": "enter_phone_number",
+      "value": "Please, enter a phone number:"
+    },
+    {
+      "key": "enter_email",
+      "value": "Please, enter an e-mail:"
+    },
+    {
+      "key": "send_failed_please_retry",
+      "value": "Sending failed! Please, retry"
+    },
+    {
+      "key": "title_device_id",
+      "value": "Your device id is:"
+    },
+    {
+      "key": "confirm_refund",
+      "value": "Confirm refund"
+    },
+    {
+      "key": "are_you_sure_refund",
+      "value": "Are you sure you want to make a refund for %s on this transaction?"
+    },
+    {
+      "key": "confirm_void",
+      "value": "Confirm void"
+    },
+    {
+      "key": "are_you_sure_void",
+      "value": "Are you sure you want to void this transaction?"
+    },
+    {
+      "key": "yes",
+      "value": "Yes"
+    },
+    {
+      "key": "no",
+      "value": "No"
+    },
+    {
+      "key": "permission_location_rationale",
+      "value": "We would need access to your location permission in order to find nearby printers."
+    },
+    {
+      "key": "allow",
+      "value": "Allow"
+    },
+    {
+      "key": "deny",
+      "value": "Deny"
+    },
+    {
+      "key": "printing_receipt_no_printer",
+      "value": "Printer not configured!"
+    },
+    {
+      "key": "printing_receipt",
+      "value": "Printing receipt…"
+    },
+    {
+      "key": "printing_receipt_success",
+      "value": "Receipt is successfully printed!"
+    },
+    {
+      "key": "printing_receipt_failed",
+      "value": "The receipt could not be printed. Please, check printer status and/or connection."
+    },
+    {
+      "key": "cvv",
+      "value": "CVV"
+    },
+    {
+      "key": "change_password",
+      "value": "Change password"
+    },
+    {
+      "key": "new_password",
+      "value": "New password"
+    },
+    {
+      "key": "change",
+      "value": "Change"
+    },
+    {
+      "key": "init_failed",
+      "value": "Initialization failed. Please, try to log in again."
+    },
+    {
+      "key": "change_password_hint",
+      "value": "You have logged in successfully! Please, change your password before you can continue."
+    },
+    {
+      "key": "reset_password",
+      "value": "Reset password"
+    },
+    {
+      "key": "reset",
+      "value": "Reset"
+    },
+    {
+      "key": "reset_password_hint",
+      "value": "Please, enter the email registered with your account. Soon, you will receive an email with a link to reset your password."
+    },
+    {
+      "key": "password_updated",
+      "value": "Password updated"
+    },
+    {
+      "key": "qr_code",
+      "value": "QR"
+    },
+    {
+      "key": "ok",
+      "value": "OK"
+    },
+    {
+      "key": "transaction_declined",
+      "value": "Transaction declined"
+    },
+    {
+      "key": "transaction_pending",
+      "value": "Unconfirmed transaction"
+    },
+    {
+      "key": "transaction_above_cvm_limit",
+      "value": "Transaction is above CVM limit. Please, enter a lower amount."
+    },
+    {
+      "key": "cardholder_is_not_using_e_wallet",
+      "value": "Cardholder is not using eWallet."
+    },
+    {
+      "key": "dnd_enabled_title",
+      "value": "Limit interruptions (enabled)"
+    },
+    {
+      "key": "dnd_disabled_title",
+      "value": "Limit interruptions (disabled)"
+    },
+    {
+      "key": "dnd_enabled_action",
+      "value": "Revoke permission to limit interruptions with Do Not Disturb"
+    },
+    {
+      "key": "dnd_disabled_action",
+      "value": "Grant permission to limit interruptions with Do Not Disturb"
+    },
+    {
+      "key": "authorizing",
+      "value": "Authorizing…"
+    },
+    {
+      "key": "max_amount",
+      "value": "max %s"
+    },
+    {
+      "key": "paired",
+      "value": "Paired"
+    },
+    {
+      "key": "available",
+      "value": "Available"
+    },
+    {
+      "key": "unknown_name",
+      "value": "Unknown name"
+    },
+    {
+      "key": "test_print",
+      "value": "Test print"
+    },
+    {
+      "key": "select",
+      "value": "Select"
+    },
+    {
+      "key": "pairing",
+      "value": "Pairing"
+    },
+    {
+      "key": "pair",
+      "value": "Pair"
+    },
+    {
+      "key": "action_code_1",
+      "value": "Refer to card issuer (01)"
+    },
+    {
+      "key": "action_code_2",
+      "value": "Refer to card issuer (02)"
+    },
+    {
+      "key": "action_code_3",
+      "value": "Invalid merchant number (03)"
+    },
+    {
+      "key": "action_code_4",
+      "value": "Retain card (04)"
+    },
+    {
+      "key": "action_code_5",
+      "value": "Do not honor (05)"
+    },
+    {
+      "key": "action_code_6",
+      "value": "System error (06)"
+    },
+    {
+      "key": "action_code_7",
+      "value": "Retain card (07)"
+    },
+    {
+      "key": "action_code_8",
+      "value": "Refer to card issuer (08)"
+    },
+    {
+      "key": "action_code_9",
+      "value": "Please wait (09)"
+    },
+    {
+      "key": "action_code_10",
+      "value": "Partial approval (10)"
+    },
+    {
+      "key": "action_code_12",
+      "value": "Invalid transaction (12)"
+    },
+    {
+      "key": "action_code_13",
+      "value": "Invalid amount (13)"
+    },
+    {
+      "key": "action_code_14",
+      "value": "Invalid card (14)"
+    },
+    {
+      "key": "action_code_15",
+      "value": "Unable to route to issuer (15)"
+    },
+    {
+      "key": "action_code_21",
+      "value": "No action taken (21)"
+    },
+    {
+      "key": "action_code_25",
+      "value": "Unable to locate record on file (25)"
+    },
+    {
+      "key": "action_code_28",
+      "value": "The file is not accessible (28)"
+    },
+    {
+      "key": "action_code_30",
+      "value": "System error (30)"
+    },
+    {
+      "key": "action_code_31",
+      "value": "Format Error (31)"
+    },
+    {
+      "key": "action_code_33",
+      "value": "Card expired (33)"
+    },
+    {
+      "key": "action_code_34",
+      "value": "Retain card (34)"
+    },
+    {
+      "key": "action_code_36",
+      "value": "Restricted card. Retain card (36)"
+    },
+    {
+      "key": "action_code_37",
+      "value": "Retain card (37)"
+    },
+    {
+      "key": "action_code_38",
+      "value": "PIN entry tries exceeded (38)"
+    },
+    {
+      "key": "action_code_40",
+      "value": "Function not supported (40)"
+    },
+    {
+      "key": "action_code_41",
+      "value": "Card reported as lost. Retain card (41)"
+    },
+    {
+      "key": "action_code_43",
+      "value": "Card reported as stolen. Retain card (43)"
+    },
+    {
+      "key": "action_code_51",
+      "value": "Insufficient funds (51)"
+    },
+    {
+      "key": "action_code_52",
+      "value": "No checking account (52)"
+    },
+    {
+      "key": "action_code_53",
+      "value": "No savings account (53)"
+    },
+    {
+      "key": "action_code_54",
+      "value": "Card expired (54)"
+    },
+    {
+      "key": "action_code_55",
+      "value": "Incorrect PIN (55)"
+    },
+    {
+      "key": "action_code_56",
+      "value": "Unknown card (56)"
+    },
+    {
+      "key": "action_code_57",
+      "value": "Original transaction not found (57)"
+    },
+    {
+      "key": "action_code_58",
+      "value": "Unknown terminal (58)"
+    },
+    {
+      "key": "action_code_59",
+      "value": "Suspected fraud (59)"
+    },
+    {
+      "key": "action_code_60",
+      "value": "PIN is required (60)"
+    },
+    {
+      "key": "action_code_61",
+      "value": "Withdraw limit exceeded (61)"
+    },
+    {
+      "key": "action_code_62",
+      "value": "Restricted card (62)"
+    },
+    {
+      "key": "action_code_63",
+      "value": "Security violation (63)"
+    },
+    {
+      "key": "action_code_64",
+      "value": "Amount higher than orig. txn (64)"
+    },
+    {
+      "key": "action_code_65",
+      "value": "Retry in contact mode (65)"
+    },
+    {
+      "key": "action_code_66",
+      "value": "Retain card (66)"
+    },
+    {
+      "key": "action_code_67",
+      "value": "Retain card (67)"
+    },
+    {
+      "key": "action_code_68",
+      "value": "Delayed response (68)"
+    },
+    {
+      "key": "action_code_75",
+      "value": "PIN entry tries exceeded (75)"
+    },
+    {
+      "key": "action_code_76",
+      "value": "Incorrect PIN (76)"
+    },
+    {
+      "key": "action_code_77",
+      "value": "Issuer does not support the service (77)"
+    },
+    {
+      "key": "action_code_78",
+      "value": "Customer not eligible for POS (78)"
+    },
+    {
+      "key": "action_code_79",
+      "value": "System error (79)"
+    },
+    {
+      "key": "action_code_80",
+      "value": "Network error (80)"
+    },
+    {
+      "key": "action_code_81",
+      "value": "PIN cryptographic error (81)"
+    },
+    {
+      "key": "action_code_82",
+      "value": "Transaction timeout (82)"
+    },
+    {
+      "key": "action_code_83",
+      "value": "Communication failure (83)"
+    },
+    {
+      "key": "action_code_85",
+      "value": "Account number, address or CVV2 verification failure (85)"
+    },
+    {
+      "key": "action_code_86",
+      "value": "PIN validation not possible (86)"
+    },
+    {
+      "key": "action_code_87",
+      "value": "Cashback amount declined (87)"
+    },
+    {
+      "key": "action_code_88",
+      "value": "Cryptographic failure (88)"
+    },
+    {
+      "key": "action_code_89",
+      "value": "Authentication failure (89)"
+    },
+    {
+      "key": "action_code_91",
+      "value": "Issuer temporarily not reachable (91)"
+    },
+    {
+      "key": "action_code_92",
+      "value": "Invalid card type (92)"
+    },
+    {
+      "key": "action_code_94",
+      "value": "Duplicated transaction (94)"
+    },
+    {
+      "key": "action_code_95",
+      "value": "Reconcile error (95)"
+    },
+    {
+      "key": "action_code_96",
+      "value": "System error (96)"
+    },
+    {
+      "key": "action_code_97",
+      "value": "System error (97)"
+    },
+    {
+      "key": "action_code_98",
+      "value": "System error (98)"
+    },
+    {
+      "key": "action_code_99",
+      "value": "System error (99)"
+    },
+    {
+      "key": "action_code_11008",
+      "value": "Processing error (11008)"
+    },
+    {
+      "key": "action_code_11009",
+      "value": "PIN Pad not initialized (11009)"
+    },
+    {
+      "key": "action_code_11010",
+      "value": "Retry in contact mode (11010)"
+    },
+    {
+      "key": "action_code_11011",
+      "value": "Expired incomplete (11011)"
+    },
+    {
+      "key": "action_code_11012",
+      "value": "Technical reversal failed (11012)"
+    },
+    {
+      "key": "action_code_11013",
+      "value": "Processor not found (11013)"
+    },
+    {
+      "key": "operations",
+      "value": "Select operation"
+    },
+    {
+      "key": "login_required",
+      "value": "Your session has expired!"
+    },
+    {
+      "key": "relogin_to_your_acc",
+      "value": "Please, login to your account again to continue."
+    },
+    {
+      "key": "login",
+      "value": "Login"
+    },
+    {
+      "key": "print_test_receipt",
+      "value": "Do you want to print a test receipt to check if your printer is properly configured?"
+    },
+    {
+      "key": "cancel",
+      "value": "Cancel"
+    },
+    {
+      "key": "unable_to_select_printer",
+      "value": "Your device doesn’t have Bluetooth! Unfortunately, you cannot you the printer functionality."
+    },
+    {
+      "key": "quit",
+      "value": "Quit"
+    },
+    {
+      "key": "phone_permission_needed_short",
+      "value": "Phone permission is needed in order to read device's IMEI number."
+    },
+    {
+      "key": "phone_permission_needed_long",
+      "value": "Phone permission is needed in order to read device's IMEI number. You can grant the permission from Settings."
+    },
+    {
+      "key": "continue_label",
+      "value": "Continue"
+    },
+    {
+      "key": "no_internet_connection",
+      "value": "Your device is offline! Please, check your internet connection."
+    },
+    {
+      "key": "device_offline_check_network",
+      "value": "Your device is offline. Please check your network and internet settings"
+    },
+    {
+      "key": "security_check_failed",
+      "value": "Security check failed"
+    },
+    {
+      "key": "security_check_failed_long",
+      "value": "Your device does not comply with all security requirements. Please contact support team for more details."
+    },
+    {
+      "key": "approved",
+      "value": "Approved"
+    },
+    {
+      "key": "not_authorized",
+      "value": "Declined"
+    },
+    {
+      "key": "please_enter_your_pin",
+      "value": "Please enter your PIN"
+    },
+    {
+      "key": "processing_error",
+      "value": "Processing error"
+    },
+    {
+      "key": "remove_card",
+      "value": "Remove card"
+    },
+    {
+      "key": "welcome",
+      "value": "Welcome"
+    },
+    {
+      "key": "present_card",
+      "value": "Present card"
+    },
+    {
+      "key": "processing",
+      "value": "Processing…"
+    },
+    {
+      "key": "card_read_ok_remove_card",
+      "value": "Card read OK\nRemove card"
+    },
+    {
+      "key": "insert_or_swipe_card",
+      "value": ""
+    },
+    {
+      "key": "present_one_card_only",
+      "value": "Present one card only"
+    },
+    {
+      "key": "approved_sign",
+      "value": "Approved"
+    },
+    {
+      "key": "try_another_card",
+      "value": "Try another card"
+    },
+    {
+      "key": "insert_card",
+      "value": ""
+    },
+    {
+      "key": "clear_display",
+      "value": ""
+    },
+    {
+      "key": "see_phone_for_instructions",
+      "value": "Please, see your device for further instructions"
+    },
+    {
+      "key": "present_card_again",
+      "value": "Please, present card again"
+    },
+    {
+      "key": "no_message",
+      "value": ""
+    },
+    {
+      "key": "amount_error_ctl",
+      "value": "Please enter an amount lower than %s %d (contactless transaction limit)"
+    },
+    {
+      "key": "amount_error_cvm",
+      "value": "Please enter an amount lower than %s %d (CVM limit)"
+    },
+    {
+      "key": "labelCatalog",
+      "value": "Catalog"
+    },
+    {
+      "key": "labelCart",
+      "value": "Cart"
+    },
+    {
+      "key": "labelAllCategories",
+      "value": "All categories"
+    },
+    {
+      "key": "labelProducts",
+      "value": "Product"
+    },
+    {
+      "key": "catalogNotInstalled",
+      "value": "Catalog module is not installed."
+    },
+    {
+      "key": "promptInstallCatalog",
+      "value": "Do you want to install Catalog module?"
+    },
+    {
+      "key": "install",
+      "value": "Install"
+    },
+    {
+      "key": "cancel",
+      "value": "Cancel"
+    },
+    {
+      "key": "see_device_id",
+      "value": "<RobotoRegular>See your<RobotoRegular/> <RobotoBold>Device ID<RobotoBold/>"
+    },
+    {
+      "key": "active",
+      "value": "Active"
+    },
+    {
+      "key": "details",
+      "value": "Details"
+    },
+    {
+      "key": "no_pin_app_title",
+      "value": "PIN Entry App is not installed"
+    },
+    {
+      "key": "no_pin_app_body",
+      "value": "You need to install our PIN Entry App before you can accept payments above the CVM limit."
+    },
+    {
+      "key": "pin_app_init_error",
+      "value": "There was an error while initializing the PIN Entry App."
+    },
+    {
+      "key": "camera_detected_title",
+      "value": "Abnormal camera usage detected"
+    },
+    {
+      "key": "camera_detected_body",
+      "value": "You are not allowed to accept payments while any of the device's cameras is used by other apps."
+    },
+    {
+      "key": "forgotten_dialog_message",
+      "value": "Reset Password Request is Received!\nShortly, you will receive an email from us with further instructions how to reset your password."
+    },
+    {
+      "key": "confirm_new_password",
+      "value": "Confirm new password"
+    },
+    {
+      "key": "passwords_not_identical",
+      "value": "Password mismatch"
+    },
+    {
+      "key": "dev_options_enabled_title",
+      "value": "Developer options usage detected"
+    },
+    {
+      "key": "dev_options_enabled_body",
+      "value": "You are not allowed to continue while Developer options are enabled."
+    },
+    {
+      "key": "version",
+      "value": "Version"
+    },
+    {
+      "key": "location_permission_explanation",
+      "value": "Location permission is needed for improved transaction security. You can grant the permission from Settings."
+    },
+    {
+      "key": "location_unavailable_explanation",
+      "value": "Please be patient while your location is being determined."
+    },
+    {
+      "key": "location_mocked_explanation",
+      "value": "Location mocking application detected, please disable it in order to continue."
+    },
+    {
+      "key": "location_disabled_explanation_title",
+      "value": "Allow %1$s to access your location while using the app"
+    },
+    {
+      "key": "location_disabled_explanation_body",
+      "value": "To enjoy all features %1$s has to offer and to ensure your high level of security, turn on your GPS and give %2$s access to your location."
+    },
+    {
+      "key": "build_number",
+      "value": "Your mobile build number:"
+    },
+    {
+      "key": "build_number_explanation",
+      "value": "To ensure the authenticity of your mobile application, please send an email to our Customer Support at support@phos.cloud with your mobile build number and they will verify it for you.\nIt is important to send the email from the email account which is registered with us."
+    },
+    {
+      "key": "build_number_tip",
+      "value": "Tip: You can click and hold on the mobile build number. It will be copied automatically to your clipboard and you can paste it easily in the email."
+    },
+    {
+      "key": "error_retrieving_instance_token",
+      "value": "Error retrieving your build number!"
+    },
+    {
+      "key": "force_update_dialog_title",
+      "value": "Update Available"
+    },
+    {
+      "key": "force_update_dialog_desc_no_date",
+      "value": "A newer version of the mobile app is available on Google Play Store.\nIn order to ensure your best user experience, please update the mobile app."
+    },
+    {
+      "key": "force_update_dialog_desc_with_date",
+      "value": "Please note you can use the current version until %s.\nAfter this date you need to update the mobile app if you would like to continue using it."
+    },
+    {
+      "key": "force_update_dialog_update",
+      "value": "Update"
+    },
+    {
+      "key": "force_update_dialog_update_now",
+      "value": "Update now"
+    },
+    {
+      "key": "init_config_title",
+      "value": ""
+    },
+    {
+      "key": "init_config_body",
+      "value": "Initialization failed"
+    },
+    {
+      "key": "donate",
+      "value": "Donate"
+    },
+    {
+      "key": "charity_custom",
+      "value": "Would you like to add more?"
+    },
+    {
+      "key": "contactless_transactions",
+      "value": "CONTACTLESS"
+    },
+    {
+      "key": "ecommerce_transactions",
+      "value": "ECOMMERCE"
+    }, {
+      "key": "above_the_cvm_limit",
+      "value": "The amount is above the CVM limit."
+    }, {
+      "key": "transaction_type_query",
+      "value": "How would you like to proceed?"
+    }, {
+      "key": "ewallet_title",
+      "value": "eWallet"
+    }, {
+      "key": "ewallet_subtitle",
+      "value": "Pay with your device"
+    }, {
+      "key": "online_transaction_title",
+      "value": "Online transaction"
+    }, {
+      "key": "online_transaction_subtitle",
+      "value": "3D secure"
+    }, {
+      "key": "decline_transaction",
+      "value": "Decline transaction"
+    }, {
+      "key": "pin_entry_required",
+      "value": "The card issuer requires PIN entry, which is currently unavailable."
+    },
+    {
+      "key": "contact_transaction_required",
+      "value": "The card issuer requires contact transaction."
+    },
+    {
+      "key": "audit_cache_check_failed",
+      "value": "System monitoring failed"
+    },
+    {
+      "key": "audit_cache_check_failed_long",
+      "value": "Your device has failed security monitoring checks for too long. Please contact support team for more details."
+    },
+    {
+      "key": "transferring",
+      "value": "Processing"
+    }
+  ]
+}

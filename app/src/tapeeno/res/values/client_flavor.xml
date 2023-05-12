@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tapeeno</string>
+
+    <drawable name="app_loading">@drawable/app_loading_tapeeno</drawable>
+    <drawable name="app_icon">@drawable/app_logo_tapeeno</drawable>
+    <drawable name="app_logo">@drawable/app_logo_tapeeno</drawable>
+
+    <!--
+
+    All colors are generated using Material Design Palette Generator
+    available at http://mcg.mbitson.com/
+-->
+    <color name="brandColor">#F39200</color>        <!-- Brand color -->
+    <color name="colorPrimary">#F39200</color>      <!-- 500 -->
+    <color name="blue_enabled">#F39200</color>      <!-- 500 -->
+    <color name="blue_disabled">#FEF2E0</color>     <!-- 50 -->
+    <color name="blue_pressed">#EA6300</color>      <!-- 900 -->
+    <color name="loading_indicator">#F7B34D</color> <!-- 300 -->
+    <color name="green_weird">#00b268</color>
+
+    <string name="font_path_regular">fonts/Montserrat-Regular.ttf</string>
+    <string name="font_path_bold">fonts/Montserrat-Bold.ttf</string>
+    <string name="font_path_italic">fonts/Montserrat-Italic.ttf</string>
+    <string name="font_path_bolditalic">fonts/Montserrat-BoldItalic.ttf</string>
+    <string name="signup_url">https://tapeeno.com/apply/</string>
+
+    <bool name="align_buttons_horizontally">true</bool>
+
+    <drawable name="default_sales_icon">@drawable/ic_pound</drawable>
+
+    <integer name="loyalty_button_visibility">@integer/view_invisible</integer>
+
+    <dimen name="logoSize">80dp</dimen>
+
+    <style name="LogoStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:maxHeight">66dp</item>
+        <item name="android:src">@drawable/app_icon</item>
+    </style>
+
+    <style name="LoginLogoStyle">
+        <item name="android:layout_width">264dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_marginTop">50dp</item>
+        <item name="android:src">@drawable/app_logo</item>
+    </style>
+
+    <style name="RoundButton" parent="PhosButton">
+        <item name="android:textColor">#000000</item>
+        <item name="android:background">@drawable/button_sales_blue</item>
+        <item name="android:textSize">@dimen/btnSlightlyBiggerSize</item>
+    </style>
+
+    <style name="ColoredFlatButton" parent="RoundButton">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:background">@drawable/button_sales_blue</item>
+    </style>
+
+</resources>

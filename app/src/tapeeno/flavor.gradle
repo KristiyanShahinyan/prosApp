@@ -1,0 +1,13 @@
+android {
+    productFlavors {
+        tapeeno {
+            dimension "client"
+            javaCompileOptions {
+                annotationProcessorOptions {
+                    arguments = ["resourcePackageName": "digital.paynetics.phos"]
+                }
+            }
+            applicationId "com.tapeeno.softpos"
+        }
+    }
+}

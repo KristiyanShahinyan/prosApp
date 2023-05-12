@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AZUL</string>
+
+    <drawable name="app_loading">@drawable/app_icon_azul</drawable>
+    <drawable name="app_icon">@drawable/app_icon_azul</drawable>
+    <drawable name="app_logo">@drawable/app_icon_azul</drawable>
+    <drawable name="default_sales_icon">@drawable/ic_dollar</drawable>
+
+    <!--
+
+    All colors are generated using Material Design Palette Generator
+    available at http://mcg.mbitson.com/
+-->
+    <color name="brandColor">#0091DF</color>        <!-- Brand color -->
+    <color name="colorPrimary">#0091DF</color>      <!-- 500 -->
+    <color name="blue_enabled">#0091DF</color>      <!-- 500 -->
+    <color name="blue_disabled">#E0F2FB</color>     <!-- 50 -->
+    <color name="blue_pressed">#0062CA</color>      <!-- 900 -->
+    <color name="loading_indicator">#4DB2E9</color> <!-- 300 -->
+
+    <color name="red">#f2ab5f</color>
+    <color name="red_pressed">#bc7c32</color>
+    <color name="red_disabled">#ffdd8e</color>
+    <color name="row_void">#ffdd8e</color>
+
+    <color name="fail_background">#f2ab5f</color>
+    <color name="fail">#f2ab5f</color>
+
+    <string name="font_path_regular">fonts/VAGRoundedLTPro-Light.otf</string>
+    <string name="font_path_bold">fonts/VAGRoundedLTPro-Bold.otf</string>
+
+    <bool name="localization_enabled">true</bool>
+    <bool name="enable_spanish_language">true</bool>
+
+    <bool name="show_settings_bank">false</bool>
+    <bool name="show_settings_tariff">false</bool>
+    <bool name="transaction_btn_sms_visible">false</bool>
+    <bool name="show_specific_currency_symbol">true</bool>
+    <integer name="loyalty_button_visibility">@integer/view_gone</integer>
+</resources>
+

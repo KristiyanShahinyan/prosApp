@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "8250601611",
+    "firebase_url": "https://phos-4dad5.firebaseio.com",
+    "project_id": "phos-4dad5",
+    "storage_bucket": "phos-4dad5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:b67d98e108ae5732a9248e",
+        "android_client_info": {
+          "package_name": "do.com.azul.softpos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

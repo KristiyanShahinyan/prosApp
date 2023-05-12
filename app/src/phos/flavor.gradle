@@ -1,0 +1,7 @@
+android {
+    productFlavors {
+        phos {
+            dimension "client"
+        }
+    }
+}

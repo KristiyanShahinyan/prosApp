@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.MainActivity">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        style="@style/DashboardLogoStyle"
+        app:layout_constraintBottom_toTopOf="@+id/txtCompanyName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/txtCompanyName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="Reward Labs"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txtTitleSize"
+        android:visibility="@integer/company_name_visibility"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+    <ImageButton
+        android:id="@+id/btnSettings"
+        style="@style/FlatImageButton"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="26dp"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_settings_24dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/txtSubtitleBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="imgLogo,txtCompanyName" />
+
+    <TextView
+        android:id="@+id/txtSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/dashboard"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/txtSubtitleSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSubtitleBarrier" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/btnSales"
+        style="@style/DashboardButtonBackground"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnTransactions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSubtitle">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/salesIcon"
+                style="@style/DashboardButtonIcon"
+                tools:src="@drawable/ic_euro" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/salesLabel"
+            style="@style/DashboardButtonLabel"
+            tools:text="@string/sales" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/btnTransactions"
+        style="@style/DashboardButtonBackground"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAnalytics"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSales">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/transactionsIcon"
+                style="@style/DashboardButtonIcon"
+                tools:src="@drawable/ic_transactions_24dp" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/transactionsLabel"
+            style="@style/DashboardButtonLabel"
+            android:maxLines="1"
+            tools:text="@string/transactions" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <LinearLayout
+        android:id="@+id/btnAnalytics"
+        style="@style/DashboardButtonBackground"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLoyalty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTransactions">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/analyticsIcon"
+                style="@style/DashboardButtonIcon"
+                tools:src="@drawable/ic_analytics_24dp" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/analyticsLabel"
+            style="@style/DashboardButtonLabel"
+            tools:text="@string/analytics" />
+
+    </LinearLayout>
+
+    <Space
+        android:id="@+id/spaceLoyalty"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:visibility="@integer/loyalty_button_visibility"
+        app:layout_constraintEnd_toStartOf="@id/btnLoyalty"
+        app:layout_constraintStart_toEndOf="@id/btnAnalytics"
+        app:layout_constraintTop_toTopOf="@id/btnAnalytics" />
+
+    <LinearLayout
+        android:id="@+id/btnLoyalty"
+        style="@style/DashboardButtonBackground"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:visibility="@integer/loyalty_button_visibility"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAnalytics">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/loyaltyIcon"
+                style="@style/DashboardButtonIcon"
+                tools:src="@drawable/ic_loyalty_24dp" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/loyaltyLabel"
+            style="@style/DashboardButtonLabel"
+            tools:text="@string/loyalty" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/shadow_bottom"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/labelDailySales"
+                style="@style/DashboardSaleLabelStyle"
+                android:text="@string/daily_sales" />
+
+            <TextView
+                android:id="@+id/labelDaily"
+                style="@style/DashboardSaleValueStyle"
+                android:text="€ 1" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="9dp"
+            android:background="@color/gray">
+
+        </View>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/labelMonthlySales"
+                style="@style/DashboardSaleLabelStyle"
+                android:text="@string/monthly_sales" />
+
+
+            <TextView
+                android:id="@+id/labelMonthly"
+                style="@style/DashboardSaleValueStyle"
+                android:text="€ 1" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

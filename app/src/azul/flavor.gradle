@@ -1,0 +1,13 @@
+android {
+    productFlavors {
+        azul {
+            dimension "client"
+            javaCompileOptions {
+                annotationProcessorOptions {
+                    arguments = ["resourcePackageName": "digital.paynetics.phos"]
+                }
+            }
+            applicationId "do.com.azul.softpos"
+        }
+    }
+}

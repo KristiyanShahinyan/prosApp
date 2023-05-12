@@ -1,0 +1,13 @@
+android {
+    productFlavors {
+        touchtopay {
+            dimension "client"
+            javaCompileOptions {
+                annotationProcessorOptions {
+                    arguments = ["resourcePackageName": "digital.paynetics.phos"]
+                }
+            }
+            applicationId "digital.paynetics.phos"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="dynamic_merchant_logo_enabled">true</bool>
+
+    <bool name="localization_enabled">true</bool>
+
+    <bool name="translations_enabled">true</bool>
+
+    <bool name="enable_english_language">true</bool>
+    <bool name="enable_bulgarian_language">true</bool>
+    <bool name="enable_german_language">true</bool>
+    <bool name="enable_spanish_language">true</bool>
+    <bool name="enable_finnish_language">true</bool>
+    <bool name="enable_greek_language">true</bool>
+    <bool name="enable_hebrew_language">true</bool>
+    <bool name="enable_latvian_language">true</bool>
+    <bool name="enable_dutch_language">true</bool>
+    <bool name="enable_polish_language">true</bool>
+    <bool name="enable_portuguese_language">true</bool>
+    <bool name="enable_romanian_language">true</bool>
+    <bool name="enable_lithuanian_language">true</bool>
+
+    <bool name="dynamic_sales_icon_enabled">true</bool>
+
+    <style name="LogoStyle" parent="LogoStyleBase" >
+        <item name="android:src">@drawable/app_logo</item>
+    </style>
+
+    <string name="support_email">support@phos.cloud</string>
+    <string name="faq_url">https://phos.cloud/faqs/</string>
+</resources>

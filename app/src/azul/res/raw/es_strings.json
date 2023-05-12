@@ -1,0 +1,1014 @@
+{
+  "strings": [
+    {
+      "key": "app_name_phos",
+      "value": "AZUL"
+    },
+    {
+      "key": "app_name_computop",
+      "value": "Computop"
+    },
+    {
+      "key": "description_splash_logo",
+      "value": ""
+    },
+    {
+      "key": "description_splash_bottom_text",
+      "value": ""
+    },
+    {
+      "key": "security_check",
+      "value": "Validación de seguridad en proceso.\nPor favor espera. "
+    },
+    {
+      "key": "forgot_password",
+      "value": "¿Olvidaste tu contraseña?"
+    },
+    {
+      "key": "login",
+      "value": "Inicia sesión"
+    },
+    {
+      "key": "signup",
+      "value": "<RobotoRegular>Nuevo en AZUL?<RobotoRegular/> <RobotoBold>Registrese ahora<RobotoBold/>"
+    },
+    {
+      "key": "email",
+      "value": "Correo electrónico"
+    },
+    {
+      "key": "password",
+      "value": "Contraseña"
+    },
+    {
+      "key": "err_msg_email",
+      "value": "Correo inválido. Por favor intenta nuevamente."
+    },
+    {
+      "key": "err_msg_password",
+      "value": "Contraseña inválida. Por favor intenta nuevamente."
+    },
+    {
+      "key": "response_code_1000",
+      "value": "Algo salió mal. Por favor, contáctenos"
+    },
+    {
+      "key": "response_code_1003",
+      "value": "Credenciales inválidas. Por favor verifica tu correo y contraseña."
+    },
+    {
+      "key": "response_code_5007",
+      "value": "Versión de aplicación no soportada.\nPor favor actualízala en tu app store."
+    },
+    {
+      "key": "retry_msg",
+      "value": "Por favor, verifica tu conexión a internet e intenta nuevamente."
+    },
+    {
+      "key": "no_records_found_filter",
+      "value": "No tienes transacciones en este periodo.\nPor favor verifica los filtros de búsqueda."
+    },
+    {
+      "key": "no_records_found",
+      "value": "No tienes transacciones en este periodo."
+    },
+    {
+      "key": "dashboard",
+      "value": "Selecciona lo que deseas realizar"
+    },
+    {
+      "key": "day_1",
+      "value": "Lun"
+    },
+    {
+      "key": "day_2",
+      "value": "Mar"
+    },
+    {
+      "key": "day_3",
+      "value": "Mie"
+    },
+    {
+      "key": "day_4",
+      "value": "Jue"
+    },
+    {
+      "key": "day_5",
+      "value": "Vie"
+    },
+    {
+      "key": "day_6",
+      "value": "Sab"
+    },
+    {
+      "key": "day_7",
+      "value": "Dom"
+    },
+    {
+      "key": "sales",
+      "value": "Cantidad de ventas"
+    },
+    {
+      "key": "transactions",
+      "value": "Transacciones"
+    },
+    {
+      "key": "loyalty",
+      "value": "Loyalty"
+    },
+    {
+      "key": "analytics",
+      "value": "Gráficas"
+    },
+    {
+      "key": "monthly_sales",
+      "value": "Ventas mensuales"
+    },
+    {
+      "key": "daily_sales",
+      "value": "Ventas diarias"
+    },
+    {
+      "key": "settings",
+      "value": "Configuración"
+    },
+    {
+      "key": "printers",
+      "value": "Impresora"
+    },
+    {
+      "key": "btn_refund",
+      "value": "Devolución"
+    },
+    {
+      "key": "btn_sale",
+      "value": "Venta"
+    },
+    {
+      "key": "btn_void",
+      "value": "Anulación"
+    },
+    {
+      "key": "btn_make_sale",
+      "value": "Confirmar"
+    },
+    {
+      "key": "btn_make_refund",
+      "value": "Devolución"
+    },
+    {
+      "key": "btn_next",
+      "value": "Siguiente"
+    },
+    {
+      "key": "btn_make_void",
+      "value": "Anulación"
+    },
+    {
+      "key": "date",
+      "value": "Fecha"
+    },
+    {
+      "key": "type",
+      "value": "Tipo"
+    },
+    {
+      "key": "status",
+      "value": "Respuesta"
+    },
+    {
+      "key": "type_all",
+      "value": "Todas"
+    },
+    {
+      "key": "type_payment",
+      "value": "Venta"
+    },
+    {
+      "key": "type_refund",
+      "value": "Devolución"
+    },
+    {
+      "key": "type_void",
+      "value": "Anulación"
+    },
+    {
+      "key": "status_successful",
+      "value": "Aprobada"
+    },
+    {
+      "key": "status_pending",
+      "value": "Pendiente"
+    },
+    {
+      "key": "status_failed",
+      "value": "Declinada"
+    },
+    {
+      "key": "log_out",
+      "value": "Cerrar sesión"
+    },
+    {
+      "key": "merchant_profile",
+      "value": "Perfil del comercio"
+    },
+    {
+      "key": "company_data",
+      "value": "Información del comercio"
+    },
+    {
+      "key": "bank_account_data",
+      "value": "Cuenta bancaria"
+    },
+    {
+      "key": "tariff_data",
+      "value": "Gravamen"
+    },
+    {
+      "key": "country",
+      "value": "País"
+    },
+    {
+      "key": "city",
+      "value": "Ciudad"
+    },
+    {
+      "key": "address",
+      "value": "Dirección"
+    },
+    {
+      "key": "language",
+      "value": "Idioma"
+    },
+    {
+      "key": "printers_select",
+      "value": "Selecciona tu impresora..."
+    },
+    {
+      "key": "iban",
+      "value": "IBAN"
+    },
+    {
+      "key": "bank",
+      "value": "Nombre de banco"
+    },
+    {
+      "key": "currency",
+      "value": "Moneda"
+    },
+    {
+      "key": "daily",
+      "value": "DIARIO"
+    },
+    {
+      "key": "weekly",
+      "value": "SEMANAL"
+    },
+    {
+      "key": "monthly",
+      "value": "MENSUAL"
+    },
+    {
+      "key": "net_sales",
+      "value": "Ventas netas"
+    },
+    {
+      "key": "avg_sales",
+      "value": "Ticket promedio"
+    },
+    {
+      "key": "amount",
+      "value": "Monto"
+    },
+    {
+      "key": "enter_pin1",
+      "value": "Ingrese PIN"
+    },
+    {
+      "key": "enter_pin2",
+      "value": "para autorizar transacción"
+    },
+    {
+      "key": "sale_success",
+      "value": "¡Pago aprobado!"
+    },
+    {
+      "key": "void_success",
+      "value": "¡Anulación aprobada!"
+    },
+    {
+      "key": "refund_success",
+      "value": "¡Devolución aprobada!"
+    },
+    {
+      "key": "print",
+      "value": "Imprimir"
+    },
+    {
+      "key": "phone",
+      "value": "Teléfono"
+    },
+    {
+      "key": "mobile_phone",
+      "value": "Móvil"
+    },
+    {
+      "key": "sms",
+      "value": "SMS"
+    },
+    {
+      "key": "send_to",
+      "value": "Enviar voucher a:"
+    },
+    {
+      "key": "leave_a_tip",
+      "value": "¿Deseas agregar\npropina?"
+    },
+    {
+      "key": "tip",
+      "value": "Confirmar propina"
+    },
+    {
+      "key": "close",
+      "value": "Cerrar"
+    },
+    {
+      "key": "skip",
+      "value": "Omitir"
+    },
+    {
+      "key": "send",
+      "value": "Enviar "
+    },
+    {
+      "key": "enter_phone_number",
+      "value": "Por favor, ingresa el número de teléfono:"
+    },
+    {
+      "key": "enter_email",
+      "value": "Por favor, ingresa el correo electrónico:"
+    },
+    {
+      "key": "send_failed_please_retry",
+      "value": "Envío fallido. Por favor intenta nuevamente."
+    },
+    {
+      "key": "title_device_id",
+      "value": "El número de identificación de tu equipo es:"
+    },
+    {
+      "key": "confirm_refund",
+      "value": "Confirmar devolución"
+    },
+    {
+      "key": "are_you_sure_refund",
+      "value": "¿Estás seguro que deseas realizar una devolución por %s?"
+    },
+    {
+      "key": "confirm_void",
+      "value": "Confirmar anulación"
+    },
+    {
+      "key": "are_you_sure_void",
+      "value": "¿Estás seguro que deseas anular esta transacción?"
+    },
+    {
+      "key": "yes",
+      "value": "Si"
+    },
+    {
+      "key": "no",
+      "value": "No"
+    },
+    {
+      "key": "permission_location_rationale",
+      "value": "Requerimos acceder al permiso de ubicación para identificar las impresoras que tienes cerca."
+    },
+    {
+      "key": "allow",
+      "value": "Permitir"
+    },
+    {
+      "key": "deny",
+      "value": "Denegar"
+    },
+    {
+      "key": "printing_receipt_no_printer",
+      "value": "Impresora no configurada"
+    },
+    {
+      "key": "printing_receipt",
+      "value": "Imprimiendo voucher…"
+    },
+    {
+      "key": "printing_receipt_success",
+      "value": "¡Tu voucher ha sido impreso exitosamente!"
+    },
+    {
+      "key": "printing_receipt_failed",
+      "value": "El voucher no pudo ser impreso. Por favor verifica la conexión a tu impresora."
+    },
+    {
+      "key": "cvv",
+      "value": "CVV"
+    },
+    {
+      "key": "change_password",
+      "value": "Cambiar contraseña"
+    },
+    {
+      "key": "new_password",
+      "value": "Nueva contraseña"
+    },
+    {
+      "key": "change",
+      "value": "Cambiar"
+    },
+    {
+      "key": "init_failed",
+      "value": "Por favor, intenta iniciar sesión nuevamente."
+    },
+    {
+      "key": "change_password_hint",
+      "value": "¡Bienvenid@! Por favor modifica tu contraseña para poder continuar."
+    },
+    {
+      "key": "reset_password",
+      "value": "Restablecer contraseña"
+    },
+    {
+      "key": "reset",
+      "value": "Restablecer"
+    },
+    {
+      "key": "reset_password_hint",
+      "value": "Digita el correo electrónico que tienes asociado a tu aplicación de AZUL. En un momento, recibirás un correo con un enlace para reiniciar tu contraseña."
+    },
+    {
+      "key": "password_updated",
+      "value": "Contraseña actualizada"
+    },
+    {
+      "key": "qr_code",
+      "value": "QR"
+    },
+    {
+      "key": "ok",
+      "value": "OK"
+    },
+    {
+      "key": "transaction_declined",
+      "value": "Transacción declinada"
+    },
+    {
+      "key": "transaction_pending",
+      "value": "transacción no confirmada"
+    },
+    {
+      "key": "transaction_above_cvm_limit",
+      "value": "La transacción supera el límite de pagos sin contacto. Por favor intenta con un monto menor."
+    },
+    {
+      "key": "dnd_enabled_title",
+      "value": "Restringir interrupciones (habilitado)"
+    },
+    {
+      "key": "dnd_disabled_title",
+      "value": "Restringir interrupciones (deshabilitado)"
+    },
+    {
+      "key": "dnd_enabled_action",
+      "value": "Deshabilitar permiso para limitar interrupciones con configuración \"No Molestar\""
+    },
+    {
+      "key": "dnd_disabled_action",
+      "value": "Habilitar permiso para limitar interrupciones con configuración \"No Molestar\""
+    },
+    {
+      "key": "authorizing",
+      "value": "Procesando…"
+    },
+    {
+      "key": "max_amount",
+      "value": "max %s"
+    },
+    {
+      "key": "paired",
+      "value": "Conectado"
+    },
+    {
+      "key": "available",
+      "value": "Disponible"
+    },
+    {
+      "key": "unknown_name",
+      "value": "Nombre desconocido"
+    },
+    {
+      "key": "test_print",
+      "value": "Prueba de impresión"
+    },
+    {
+      "key": "select",
+      "value": "Seleccionar"
+    },
+    {
+      "key": "pairing",
+      "value": "Conectando"
+    },
+    {
+      "key": "pair",
+      "value": "Conectar"
+    },
+    {
+      "key": "action_code_3",
+      "value": "Lo sentimos. Contacta a tu oficial de cuentas para verificar la configuración de tu localidad. (03)"
+    },
+    {
+      "key": "action_code_4",
+      "value": "Retener tarjeta (04)"
+    },
+    {
+      "key": "action_code_5",
+      "value": "Declinada. Favor contacta tu banco emisor y/o intenta el pago con otra tarjeta (05)"
+    },
+    {
+      "key": "action_code_6",
+      "value": "Error del sistema(06)"
+    },
+    {
+      "key": "action_code_12",
+      "value": "Declinada (12)"
+    },
+    {
+      "key": "action_code_13",
+      "value": "Declinada (13)"
+    },
+    {
+      "key": "action_code_14",
+      "value": "Declinada (14)"
+    },
+    {
+      "key": "action_code_21",
+      "value": "Acción  no ejecutada (21)"
+    },
+    {
+      "key": "action_code_25",
+      "value": "Declinada (25)"
+    },
+    {
+      "key": "action_code_30",
+      "value": "Error del sistema  (30)"
+    },
+    {
+      "key": "action_code_31",
+      "value": "Format Error (31)"
+    },
+    {
+      "key": "action_code_33",
+      "value": "Tarjeta expiró (33)"
+    },
+    {
+      "key": "action_code_34",
+      "value": "Retain card (34)"
+    },
+    {
+      "key": "action_code_40",
+      "value": "Function not supported (40)"
+    },
+    {
+      "key": "action_code_43",
+      "value": "Retener tarjeta  (43)"
+    },
+    {
+      "key": "action_code_55",
+      "value": "Declinada (55)"
+    },
+    {
+      "key": "action_code_56",
+      "value": "Tarjeta desconocida (56)"
+    },
+    {
+      "key": "action_code_57",
+      "value": "Declinada (57)"
+    },
+    {
+      "key": "action_code_58",
+      "value": "Terminal desconocido (58)"
+    },
+    {
+      "key": "action_code_60",
+      "value": "Resend current authorization request including PIN data (60)"
+    },
+    {
+      "key": "action_code_62",
+      "value": "Tarjeta restringida (62)"
+    },
+    {
+      "key": "action_code_64",
+      "value": "Monto mayor a transacción original (64)"
+    },
+    {
+      "key": "action_code_65",
+      "value": "Reintentar insertando tarjeta (65)"
+    },
+    {
+      "key": "action_code_75",
+      "value": "Declinada  (75)"
+    },
+    {
+      "key": "action_code_77",
+      "value": "Error del sistema (77)"
+    },
+    {
+      "key": "action_code_78",
+      "value": "Requiere digitar PIN  (78)"
+    },
+    {
+      "key": "action_code_79",
+      "value": "Error del sistema (79)"
+    },
+    {
+      "key": "action_code_81",
+      "value": "Error del sistema (81)"
+    },
+    {
+      "key": "action_code_91",
+      "value": "Declinada. Favor intenta de nuevo. (91)"
+    },
+    {
+      "key": "action_code_92",
+      "value": "Tipo de tarjeta inválido (92)"
+    },
+    {
+      "key": "action_code_96",
+      "value": "Error del sistema (96)"
+    },
+    {
+      "key": "action_code_97",
+      "value": "Error del sistema (97)"
+    },
+    {
+      "key": "action_code_98",
+      "value": "Error del sistema (98)"
+    },
+    {
+      "key": "action_code_99",
+      "value": "Error del sistema (99)"
+    },
+    {
+      "key": "operations",
+      "value": "Opciones"
+    },
+    {
+      "key": "login_required",
+      "value": "Tu sesión ha expirado. Por favor inicia sesión nuevamente."
+    },
+    {
+      "key": "relogin_to_your_acc",
+      "value": "Por favor, inicia sesión nuevamente para continuar."
+    },
+    {
+      "key": "login",
+      "value": "Iniciar sesión"
+    },
+    {
+      "key": "print_test_receipt",
+      "value": "¿Te gustaría realizar una impresión de prueba para verificar la configuración de tu impresora?"
+    },
+    {
+      "key": "cancel",
+      "value": "Cancelar"
+    },
+    {
+      "key": "unable_to_select_printer",
+      "value": "Se requiere de conexión Bluetooth para conectar la impresora."
+    },
+    {
+      "key": "quit",
+      "value": "Cancelar"
+    },
+    {
+      "key": "phone_permission_needed_short",
+      "value": "Se requiere del permiso de tu móvil para lectura de su número de IMEI."
+    },
+    {
+      "key": "phone_permission_needed_long",
+      "value": "Se requiere del permiso de tu móvil para lectura de su número de IMEI. Lo puedes habilitar desde Configuración."
+    },
+    {
+      "key": "continue_label",
+      "value": "Continuar"
+    },
+    {
+      "key": "no_internet_connection",
+      "value": ""
+    },
+    {
+      "key": "device_offline_check_network",
+      "value": "Por favor, verifica tu acceso a la red."
+    },
+    {
+      "key": "security_check_failed",
+      "value": "Verificación de seguridad fallida. "
+    },
+    {
+      "key": "security_check_failed_long",
+      "value": "Tu dispositivo presenta inconvenientes de seguridad. Por favor, contáctanos al Centro AZUL."
+    },
+    {
+      "key": "approved",
+      "value": "Aprobada"
+    },
+    {
+      "key": "not_authorized",
+      "value": "Declinada"
+    },
+    {
+      "key": "please_enter_your_pin",
+      "value": "Por favor ingresa tu PIN"
+    },
+    {
+      "key": "processing_error",
+      "value": "Error de procesamiento"
+    },
+    {
+      "key": "remove_card",
+      "value": "Retira la tarjeta"
+    },
+    {
+      "key": "welcome",
+      "value": "Bienvenid@"
+    },
+    {
+      "key": "present_card",
+      "value": "Tapea la tarjeta o billetera NFC"
+    },
+    {
+      "key": "processing",
+      "value": "Procesando…"
+    },
+    {
+      "key": "card_read_ok_remove_card",
+      "value": "Lectura de tarjeta satisfactoria.\nPuedes retirarla."
+    },
+    {
+      "key": "insert_or_swipe_card",
+      "value": ""
+    },
+    {
+      "key": "present_one_card_only",
+      "value": "Tapea una sola tarjeta en el dispositivo."
+    },
+    {
+      "key": "approved_sign",
+      "value": "Aprobada"
+    },
+    {
+      "key": "try_another_card",
+      "value": "Por favor, intenta con otra tarjeta."
+    },
+    {
+      "key": "insert_card",
+      "value": ""
+    },
+    {
+      "key": "clear_display",
+      "value": ""
+    },
+    {
+      "key": "see_phone_for_instructions",
+      "value": "Por favor, revise su dispositivo para más instrucciones"
+    },
+    {
+      "key": "present_card_again",
+      "value": "Por favor, tapea de nuevo tu tarjeta o billetera NFC."
+    },
+    {
+      "key": "no_message",
+      "value": ""
+    },
+    {
+      "key": "amount_error_ctl",
+      "value": "Por favor, ingresa un monto menor a  %s %d (límite para transacciones sin contacto)"
+    },
+    {
+      "key": "amount_error_cvm",
+      "value": "Por favor ingresa un monto menor a %s %d (límite para transacciones sin contacto)"
+    },
+    {
+      "key": "labelCatalog",
+      "value": "Catálogo"
+    },
+    {
+      "key": "labelCart",
+      "value": "Carrito de compras"
+    },
+    {
+      "key": "labelAllCategories",
+      "value": "Todas las categorías"
+    },
+    {
+      "key": "labelProducts",
+      "value": "Producto"
+    },
+    {
+      "key": "catalogNotInstalled",
+      "value": "Módulo de ctálogo o esta instalado."
+    },
+    {
+      "key": "promptInstallCatalog",
+      "value": "Desea instalar el módulo de catálogo?"
+    },
+    {
+      "key": "install",
+      "value": "Instalar"
+    },
+    {
+      "key": "cancel",
+      "value": "Cancelar"
+    },
+    {
+      "key": "see_device_id",
+      "value": "<RobotoRegular>Consulta<RobotoRegular/> <RobotoBold>el identificador de tu dispositivo<RobotoBold/>"
+    },
+    {
+      "key": "active",
+      "value": "Activo"
+    },
+    {
+      "key": "details",
+      "value": "Detalles"
+    },
+    {
+      "key": "no_pin_app_title",
+      "value": "Aplicación para ingreso de PIN no instalada"
+    },
+    {
+      "key": "no_pin_app_body",
+      "value": "Debe instalar la App de ingreso de PIN antes de aceptar pagos que exceden el límite de CVM."
+    },
+    {
+      "key": "pin_app_init_error",
+      "value": "Hubo un error inicializando la App de ingreso de PIN."
+    },
+    {
+      "key": "camera_detected_title",
+      "value": "Uso anormal de cámara detectado"
+    },
+    {
+      "key": "camera_detected_body",
+      "value": "No está permitido procesar pagos mientras la cámara de tu dispositivo sea utilizada por otras aplicaciones."
+    },
+    {
+      "key": "forgotten_dialog_message",
+      "value": "¡Solicitud de restablecimiento de contraseña recibida!\nVerifica tu correo electrónico para recibir las instrucciones."
+    },
+    {
+      "key": "confirm_new_password",
+      "value": "Confirma la nueva contraseña que ingresaste."
+    },
+    {
+      "key": "passwords_not_identical",
+      "value": "Las contraseñas ingresadas no coinciden. Por favor, intenta nuevamente."
+    },
+    {
+      "key": "dev_options_enabled_title",
+      "value": "Se detectó el uso de opciones de desarollo"
+    },
+    {
+      "key": "dev_options_enabled_body",
+      "value": "No es posible continuar con opciones de desarrollo habilitadas."
+    },
+    {
+      "key": "version",
+      "value": "Versión"
+    },
+    {
+      "key": "location_permission_explanation",
+      "value": "Se requiere el permiso de verificar tu ubicación para mejorar la seguridad de las transacciones. Puedes habilitarlo en la sección de \"Ajustes\" de tu móvil."
+    },
+    {
+      "key": "location_unavailable_explanation",
+      "value": "Se está identificando tu ubicación. Por favor, espera."
+    },
+    {
+      "key": "location_mocked_explanation",
+      "value": "Para poder continuar, no pueden haber otras aplicaciones que estén identificando tu ubicación."
+    },
+    {
+      "key": "location_disabled_explanation_title",
+      "value": "Permitir %1$s acceder a su ubicación"
+    },
+    {
+      "key": "location_disabled_explanation_body",
+      "value": "Para disfrutar todas las funciones de %1$s y ofrecer un alto nivel de seguridad, active su GPS y permita a %2$s acceso a su ubicación."
+    },
+    {
+      "key": "build_number",
+      "value": "Número de compilación de su celular:"
+    },
+    {
+      "key": "build_number_explanation",
+      "value": "Para asegurar la autenticidad de la aplicación en su celular, por favor, contáctanos al Centro AZUL con su número de compilación de celular y ellos le ayudarán con la verificación.\nEs importante enviar el email desde la misma cuenta que tiene registrada con nosotros."
+    },
+    {
+      "key": "build_number_tip",
+      "value": "Consejo: Puede hacer click sostenido sobre el número de compilación, éste será copiado automaticamente al portapapeles y pegarlo fácilmente en el email."
+    },
+    {
+      "key": "error_retrieving_instance_token",
+      "value": "Error obteniendo número de compilación!"
+    },
+    {
+      "key": "force_update_dialog_title",
+      "value": "Actualización disponible"
+    },
+    {
+      "key": "force_update_dialog_desc_no_date",
+      "value": "La versión más actualizada del app está disponible en tu tienda de aplicaciones ¡Por favor descárgala!"
+    },
+    {
+      "key": "force_update_dialog_desc_with_date",
+      "value": "Podrás continuar utilizando esta versión de la aplicación hasta %.\nLuego de esta fecha, necesitarás actualizarla para continuar utilizándola."
+    },
+    {
+      "key": "force_update_dialog_update",
+      "value": "Actualizar"
+    },
+    {
+      "key": "force_update_dialog_update_now",
+      "value": "Actualizar ahora"
+    },
+    {
+      "key": "init_config_title",
+      "value": ""
+    },
+    {
+      "key": "init_config_body",
+      "value": "Inicio de sesión fallido. Por favor, intenta nuevamente."
+    },
+    {
+      "key": "donate",
+      "value": "Donar"
+    },
+    {
+      "key": "charity_custom",
+      "value": "Would you like to add more?"
+    },
+    {
+      "key": "contactless_transactions",
+      "value": "Sin contacto "
+    },
+    {
+      "key": "ecommerce_transactions",
+      "value": "ECOMMERCE"
+    },
+    {
+      "key": "above_the_cvm_limit",
+      "value": "El monto está por encima del límite. Por favor, intenta nuevamente."
+    },
+    {
+      "key": "transaction_type_query",
+      "value": "Por favor elige lo que deseas realizar."
+    },
+    {
+      "key": "ewallet_title",
+      "value": "eWallet"
+    },
+    {
+      "key": "ewallet_subtitle",
+      "value": "Pagar con tu disponitivo."
+    },
+    {
+      "key": "online_transaction_title",
+      "value": "Transacción en línea."
+    },
+    {
+      "key": "online_transaction_subtitle",
+      "value": "Autenticación del Tarjetahabiente."
+    }, {
+      "key": "decline_transaction",
+      "value": "Declinar transacción"
+    }, {
+      "key": "pin_entry_required",
+      "value": "Se requiere que ingreses el PIN para procesar la transacción. Por favor contacta a tu banco emisor."
+    },
+    {
+      "key": "contact_transaction_required",
+      "value": "No se puede procesar la transacción. Por favor contacta a tu banco emisor."
+    },
+    {
+      "key": "audit_cache_check_failed",
+      "value": "Tu dispositivo presenta inconvenientes de seguridad. Por favor, contáctanos al Centro AZUL."
+    },
+    {
+      "key": "audit_cache_check_failed_long",
+      "value": "YTu dispositivo presenta inconvenientes de seguridad. Por favor, contáctanos al Centro AZUL."
+    },
+    {
+      "key": "transferring",
+      "value": "Tramitación"
+    }
+  ]
+}
