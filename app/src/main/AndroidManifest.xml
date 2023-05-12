@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="digital.paynetics.phos">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- Required to control the Do Not Disturb setting -->
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <!-- Required to mute/unmute the microphone during transactions -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application
+        android:name=".PhosApplication_"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:resizeableActivity="false"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".screens.SplashActivity_"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="${host}"
+                    android:pathPrefix="/link/"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="phos" />
+                <data android:host="${applicationId}" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="${applicationId}.TRANSACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="${applicationId}.SOFTPOS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.MainActivity_"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".screens.App2AppActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".screens.LoginActivity_"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".screens.SettingsActivity"
+            android:theme="@style/SettingsTheme"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".screens.AnalyticsActivity_"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".screens.TransactionsActivity_"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".screens.LoyaltyActivity_"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".screens.ActReader"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".screens.SignupActivity_"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".screens.BuildNumberActivity_"
+            android:theme="@style/SettingsTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screens.ForgotPasswordActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".screens.ChangePasswordActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".screens.PrintersActivity_"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>
