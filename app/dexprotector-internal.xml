@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dexprotector>
+    <signMode>google</signMode>
+    <!-- Cert used to sign apps uploaded to the internal test track on Google Play -->
+    <sha256CertificateFingerprint>19:71:E1:00:38:C1:F5:43:A9:A7:D7:38:1E:52:48:73:38:8A:DE:FE:72:7D:A8:D4:01:F1:9E:E4:56:9F:1E:A0</sha256CertificateFingerprint>
+
+    <stripLogging>all</stripLogging>
+
+    <stringEncryption mode="all">
+        <filters>
+            <!--
+                These are classes with strings that could be helpful to reverse engineers.
+                For example: the SafetyNet API key, hints where our custom security checks
+                are activated, also what could fail and etc. It's better encrypt all these.
+
+                There is already some cold start delay so we have to optimize and protect
+                only the important stuff.
+            -->
+            <filter>glob:digital/paynetics/phos/screens/SplashActivity.class</filter>
+            <filter>glob:digital/paynetics/phos/screens/LoginActivity.class</filter>
+            <filter>glob:digital/paynetics/phos/security/**</filter>
+            <filter>glob:digital/paynetics/phos/PhosApplication.class</filter>
+            <filter>glob:digital/paynetics/phos/sdk/services/PhosConnect.class</filter>
+            <filter>glob:digital/paynetics/phos/app/units/reader/ActReader.class</filter>
+        </filters>
+    </stringEncryption>
+
+    <classEncryption mode="all">
+        <filters>
+            <!--
+                No noticeable diff when protecting all classes compared to protecting only
+                some important ones so encrypt all as long as the code base is that small.
+            -->
+            <!--
+                Encrypt and hide (same filters are added in the below section) all
+                the phos code plus all important open source libs like okhttp, rootbeer, etc.
+                and exclude all third party libs listed below.
+            -->
+            <filter>glob:!android/**</filter>
+            <filter>glob:!androidx/**</filter>
+            <filter>glob:!com/google/**</filter>
+            <filter>glob:!com/crashlytics/**</filter>
+            <filter>glob:!com/sun/**</filter>
+            <filter>glob:!com/db/**</filter>
+            <filter>glob:!com/github/**</filter>
+            <filter>glob:!com/bolyartech/**</filter>
+            <filter>glob:!com/mindprod/**</filter>
+            <filter>glob:!com/android/**</filter>
+            <filter>glob:!ch/**</filter>
+            <filter>glob:!java/**</filter>
+            <filter>glob:!io/**</filter>
+            <filter>glob:!org/**</filter>
+            <filter>glob:!brut/**</filter>
+            <filter>glob:!hirondelle/**</filter>
+            <filter>glob:!androidx/**</filter>
+            <filter>glob:!sun/**</filter>
+            <filter>glob:!java8/**</filter>
+        </filters>
+    </classEncryption>
+
+    <hideAccess mode="all">
+        <filters>
+            <filter>glob:!android/**</filter>
+            <filter>glob:!androidx/**</filter>
+            <filter>glob:!com/google/**</filter>
+            <filter>glob:!com/crashlytics/**</filter>
+            <filter>glob:!com/sun/**</filter>
+            <filter>glob:!com/db/**</filter>
+            <filter>glob:!com/github/**</filter>
+            <filter>glob:!com/bolyartech/**</filter>
+            <filter>glob:!com/mindprod/**</filter>
+            <filter>glob:!com/android/**</filter>
+            <filter>glob:!ch/**</filter>
+            <filter>glob:!java/**</filter>
+            <filter>glob:!io/**</filter>
+            <filter>glob:!org/**</filter>
+            <filter>glob:!brut/**</filter>
+            <filter>glob:!hirondelle/**</filter>
+            <filter>glob:!androidx/**</filter>
+            <filter>glob:!sun/**</filter>
+            <filter>glob:!java8/**</filter>
+
+            <!--<filter>glob:digital/paynetics/phos/classes/**</filter>-->
+            <!--<filter>glob:digital/paynetics/phos/dagger/**</filter>-->
+            <!--<filter>glob:digital/paynetics/phos/logging/**</filter>-->
+            <!--<filter>glob:digital/paynetics/phos/screens/**</filter>-->
+            <!--<filter>glob:digital/paynetics/phos/security/**</filter>-->
+            <!--<filter>glob:digital/paynetics/phos/PhosApplication.class</filter>-->
+            <!--<filter>glob:digital/paynetics/phos/sdk/**</filter>-->
+            <!--<filter>glob:digital/paynetics/pinpad_security/**</filter>-->
+
+            <!--<filter>glob:digital/paynetics/phos/app/**</filter>-->
+            <!--<filter>glob:digital/paynetics/phos/entry_point/**</filter>-->
+            <!--<filter>glob:digital/paynetics/phos/kernel/**</filter>-->
+        </filters>
+    </hideAccess>
+
+    <resourceEncryption androidManifestMangling="on" nameObfuscation="on">
+        <res>
+            <filters>
+                <filter>glob:layout**</filter>
+                <filter>**.json</filter>
+                <filter>**.pem</filter>
+                <filter>**.cer</filter>
+            </filters>
+        </res>
+        <strings>
+            <filters>
+                <filter>glob:!app_name</filter>
+                <filter>glob:!app_name_phos</filter>
+                <filter>glob:!app_name_computop</filter>
+            </filters>
+        </strings>
+        <androidManifestMangling />
+    </resourceEncryption>
+
+    <nativeLibraryEncryption mode="all">
+        <filters>
+            <filter>glob:libphos.so</filter>
+        </filters>
+    </nativeLibraryEncryption>
+
+    <jniObfuscation mode="all">
+        <filters>
+            <filter>glob:digital/paynetics/phos/security/checks/PhosNative.class</filter>
+        </filters>
+    </jniObfuscation>
+
+    <integrityControl>
+        <checkCertificate>on</checkCertificate>
+    </integrityControl>
+
+    <detect>
+        <root>
+            <positiveCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onPositiveRootCheck</positiveCheckCallback>
+            <negativeCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onNegativeCheck</negativeCheckCallback>
+            <probeMethod>digital.paynetics.phos.security.checks.DexProtectorManager.doRootProbe</probeMethod>
+        </root>
+
+        <debug>
+            <positiveCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onPositiveDebugCheck</positiveCheckCallback>
+            <negativeCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onNegativeCheck</negativeCheckCallback>
+            <probeMethod>digital.paynetics.phos.security.checks.DexProtectorManager.doDebugProbe</probeMethod>
+        </debug>
+
+        <emulator>
+            <positiveCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onPositiveRootCheck</positiveCheckCallback>
+            <negativeCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onNegativeCheck</negativeCheckCallback>
+            <probeMethod>digital.paynetics.phos.security.checks.DexProtectorManager.doRootProbe</probeMethod>
+        </emulator>
+
+        <integrity>
+            <positiveCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onPositiveIntegrityCheck</positiveCheckCallback>
+            <negativeCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onNegativeCheck</negativeCheckCallback>
+            <probeMethod>digital.paynetics.phos.security.checks.DexProtectorManager.doIntegrityProbe</probeMethod>
+            <!--<filters>-->
+                <!--<filter>...</filter>-->
+            <!--</filters>-->
+        </integrity>
+
+        <hooks>
+            <positiveCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onPositiveHookCheck</positiveCheckCallback>
+            <negativeCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onNegativeCheck</negativeCheckCallback>
+            <probeMethod>digital.paynetics.phos.security.checks.DexProtectorManager.doHookProbe</probeMethod>
+        </hooks>
+    </detect>
+
+    <jcaCryptoModule>
+        <filters>
+            <filter>glob:digital/paynetics/phos/security/crypto/DH*</filter>
+        </filters>
+    </jcaCryptoModule>
+
+</dexprotector>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dexprotector>
+    <signMode>release</signMode>
+
+    <verbose>true</verbose>
+
+    <stringEncryption mode="all">
+        <filters>
+            <!--
+                These are classes with strings that could be helpful to reverse engineers.
+                For example: the SafetyNet API key, hints where our custom security checks
+                are activated, also what could fail and etc. It's better encrypt all these.
+
+                There is already some cold start delay so we have to optimize and protect
+                only the important stuff.
+            -->
+            <filter>glob:digital/paynetics/phos/screens/SplashActivity.class</filter>
+            <filter>glob:digital/paynetics/phos/screens/LoginActivity.class</filter>
+            <filter>glob:digital/paynetics/phos/security/**</filter>
+            <filter>glob:digital/paynetics/phos/PhosApplication.class</filter>
+            <filter>glob:digital/paynetics/phos/sdk/services/PhosConnect.class</filter>
+            <filter>glob:digital/paynetics/phos/app/units/reader/ActReader.class</filter>
+        </filters>
+    </stringEncryption>
+
+    <classEncryption mode="all">
+        <filters>
+            <!--
+                No noticeable diff when protecting all classes compared to protecting only
+                some important ones so encrypt all as long as the code base is that small.
+            -->
+            <!--
+                Encrypt and hide (same filters are added in the below section) all
+                the phos code plus all important open source libs like okhttp, rootbeer, etc.
+                and exclude all third party libs listed below.
+            -->
+            <filter>glob:!android/**</filter>
+            <filter>glob:!androidx/**</filter>
+            <filter>glob:!com/google/**</filter>
+            <filter>glob:!com/crashlytics/**</filter>
+            <filter>glob:!com/sun/**</filter>
+            <filter>glob:!com/db/**</filter>
+            <filter>glob:!com/github/**</filter>
+            <filter>glob:!com/bolyartech/**</filter>
+            <filter>glob:!com/mindprod/**</filter>
+            <filter>glob:!com/android/**</filter>
+            <filter>glob:!ch/**</filter>
+            <filter>glob:!java/**</filter>
+            <filter>glob:!io/**</filter>
+            <filter>glob:!org/**</filter>
+            <filter>glob:!brut/**</filter>
+            <filter>glob:!hirondelle/**</filter>
+            <filter>glob:!androidx/**</filter>
+            <filter>glob:!sun/**</filter>
+            <filter>glob:!java8/**</filter>
+        </filters>
+    </classEncryption>
+
+    <hideAccess mode="all">
+        <filters>
+            <filter>glob:!android/**</filter>
+            <filter>glob:!androidx/**</filter>
+            <filter>glob:!com/google/**</filter>
+            <filter>glob:!com/crashlytics/**</filter>
+            <filter>glob:!com/sun/**</filter>
+            <filter>glob:!com/db/**</filter>
+            <filter>glob:!com/github/**</filter>
+            <filter>glob:!com/bolyartech/**</filter>
+            <filter>glob:!com/mindprod/**</filter>
+            <filter>glob:!com/android/**</filter>
+            <filter>glob:!ch/**</filter>
+            <filter>glob:!java/**</filter>
+            <filter>glob:!io/**</filter>
+            <filter>glob:!org/**</filter>
+            <filter>glob:!brut/**</filter>
+            <filter>glob:!hirondelle/**</filter>
+            <filter>glob:!androidx/**</filter>
+            <filter>glob:!sun/**</filter>
+            <filter>glob:!java8/**</filter>
+        </filters>
+    </hideAccess>
+
+    <resourceEncryption androidManifestMangling="on" nameObfuscation="on">
+        <res>
+            <filters>
+                <filter>glob:layout**</filter>
+                <filter>**.json</filter>
+                <filter>glob:raw/phos_amazon_root**</filter>
+                <filter>glob:raw/public_key**</filter>
+                <!--                Encrypting network_security_config with DP11 leads to crash on Android 11-->
+                <!--                <filter>glob:xml/network_security_config.xml</filter>-->
+            </filters>
+        </res>
+        <strings>
+            <filters>
+                <filter>glob:!app_name</filter>
+            </filters>
+        </strings>
+        <androidManifestMangling />
+    </resourceEncryption>
+
+    <nativeLibraryEncryption mode="all">
+        <filters>
+            <!--libphos provides cpp/anti-debug.cpp and cpp/check-frida.cpp-->
+            <filter>glob:libphos.so</filter>
+            <!--libphos2 provides custom build of Themis crypto lib ('libs/themis.aar')-->
+            <filter>glob:libphos2.so</filter>
+        </filters>
+    </nativeLibraryEncryption>
+
+    <jniObfuscation mode="all">
+        <filters>
+            <!--JNI entry point to checks cpp/anti-debug.cpp and cpp/check-frida.cpp-->
+            <filter>glob:digital/paynetics/phos/c/n.class</filter>
+            <!--JNI entry point to custom build of Themis crypto lib ('libs/themis.aar')-->
+            <!--TODO Fix and enable. App crashes with 'Bad JNI version returned from JNI_OnLoad'-->
+            <!--            <filter>glob:digital/paynetics/phos/t/n.class</filter>-->
+        </filters>
+    </jniObfuscation>
+
+    <integrityControl>
+        <checkCertificate>on</checkCertificate>
+    </integrityControl>
+
+    <securityAssessment>
+        <signingCertificateCompromised mode="error" />
+        <signingCertificateWeakKey mode="error" />
+        <dependencyCheck mode="warning" />
+    </securityAssessment>
+
+    <uiProtection/>
+
+    <runtimeChecks/>
+
+    <platformApplicationSupport>on</platformApplicationSupport>
+
+    <jcaCryptoModule>
+        <importKey keystore="phos-dev-wrap.jks"
+            storepass="12345678"
+            alias="dev-wrap-key"
+            keypass="12345678"/>
+        <filters>
+            <filter>glob:digital/paynetics/phos/security/crypto/DH*</filter>
+            <filter>glob:digital/paynetics/phos/security/DexRandom*</filter>
+            <filter>glob:digital/paynetics/phos/security/crypto/PhosDexSignature*</filter>
+            <filter>glob:digital/paynetics/phos/security/crypto/PhosDexWrapper*</filter>
+            <filter>glob:digital/paynetics/phos/sca/ScaCryptoModule*</filter>
+        </filters>
+    </jcaCryptoModule>
+
+    <platformApplicationSupport>on</platformApplicationSupport>
+
+    <publicKeyPinning src="res/xml/network_security_config.xml">
+        <reportUri>https://api.review.phos.dev/v1/ssl-pinning</reportUri>
+    </publicKeyPinning>
+
+</dexprotector>

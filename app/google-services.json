@@ -1,0 +1,533 @@
+{
+  "project_info": {
+    "project_number": "8250601611",
+    "firebase_url": "https://phos-4dad5.firebaseio.com",
+    "project_id": "phos-4dad5",
+    "storage_bucket": "phos-4dad5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:1911360fdbb91157a9248e",
+        "android_client_info": {
+          "package_name": "cloud.phos.avon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:ab21aca4da99796ba9248e",
+        "android_client_info": {
+          "package_name": "cloud.phos.bgpostbank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:5fe5b5b8ee0cdf2ca9248e",
+        "android_client_info": {
+          "package_name": "cloud.phos.cmcom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:9cf67d99ce9191e3a9248e",
+        "android_client_info": {
+          "package_name": "cloud.phos.cmcom.softpinpad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:7cf9aa83b0834db5a9248e",
+        "android_client_info": {
+          "package_name": "cloud.phos.curb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:cc6b562578b39f10a9248e",
+        "android_client_info": {
+          "package_name": "com.curb.android.curbpay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:918a5338d5e4bf7ca9248e",
+        "android_client_info": {
+          "package_name": "cy.com.jcc.softpos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:d9018493ee126deca9248e",
+        "android_client_info": {
+          "package_name": "cy.com.jcc.softpos.softpinpad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:5b18efd5eca4369d",
+        "android_client_info": {
+          "package_name": "digital.paynetics.phos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:7afa9a50d51d4b91a9248e",
+        "android_client_info": {
+          "package_name": "digital.paynetics.phos.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:7009e9212844ddaaa9248e",
+        "android_client_info": {
+          "package_name": "digital.paynetics.phos.demo.softpinpad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:3711355ea599b283a9248e",
+        "android_client_info": {
+          "package_name": "digital.paynetics.phos.softpinpad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:97b83238f8fd0ccfa9248e",
+        "android_client_info": {
+          "package_name": "maxaa.pos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:0148a2b4113ac21aa9248e",
+        "android_client_info": {
+          "package_name": "maxaa.pos.pinpad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:1b434cfa59fd631ba9248e",
+        "android_client_info": {
+          "package_name": "maxaa.pos.softpinpad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:9a80e902e6a22b7ea9248e",
+        "android_client_info": {
+          "package_name": "net.eazy.pay.softpinpad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:16b40caf4358362ba9248e",
+        "android_client_info": {
+          "package_name": "tech.wellet.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8250601611:android:667e50ae1a128feea9248e",
+        "android_client_info": {
+          "package_name": "tech.wellet.app.softpinpad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxFIj5SLVIXmybX60RKQfwo6fQyzHCk0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8250601611-km212fi7mahblb9rl289hcrh2t93c0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

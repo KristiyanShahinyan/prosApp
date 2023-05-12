@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dexprotector>
+    <signMode>google</signMode>
+    <!-- Fingerprint is used only when signMode is 'google' -->
+    <sha256CertificateFingerprint>26:B2:23:9F:AF:6D:18:2B:F3:FD:85:DE:AD:1A:8F:25:88:F4:94:BC:0A:9F:5E:18:2A:74:BB:44:A0:05:06:0F</sha256CertificateFingerprint>
+
+    <stripLogging>all</stripLogging>
+
+    <integrityControl>
+        <checkCertificate>on</checkCertificate>
+    </integrityControl>
+
+    <detect>
+        <root>
+            <positiveCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onPositiveRootCheck</positiveCheckCallback>
+            <negativeCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onNegativeCheck</negativeCheckCallback>
+            <probeMethod>digital.paynetics.phos.security.checks.DexProtectorManager.doRootProbe</probeMethod>
+        </root>
+
+        <debug>
+            <positiveCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onPositiveDebugCheck</positiveCheckCallback>
+            <negativeCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onNegativeCheck</negativeCheckCallback>
+            <probeMethod>digital.paynetics.phos.security.checks.DexProtectorManager.doDebugProbe</probeMethod>
+        </debug>
+
+        <emulator>
+            <positiveCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onPositiveRootCheck</positiveCheckCallback>
+            <negativeCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onNegativeCheck</negativeCheckCallback>
+            <probeMethod>digital.paynetics.phos.security.checks.DexProtectorManager.doRootProbe</probeMethod>
+        </emulator>
+
+        <integrity>
+            <positiveCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onPositiveIntegrityCheck</positiveCheckCallback>
+            <negativeCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onNegativeCheck</negativeCheckCallback>
+            <probeMethod>digital.paynetics.phos.security.checks.DexProtectorManager.doIntegrityProbe</probeMethod>
+            <!--<filters>-->
+            <!--<filter>...</filter>-->
+            <!--</filters>-->
+        </integrity>
+
+        <hooks>
+            <positiveCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onPositiveHookCheck</positiveCheckCallback>
+            <negativeCheckCallback>digital.paynetics.phos.security.checks.DexProtectorManager.onNegativeCheck</negativeCheckCallback>
+            <probeMethod>digital.paynetics.phos.security.checks.DexProtectorManager.doHookProbe</probeMethod>
+        </hooks>
+    </detect>
+
+    <platformApplicationSupport>on</platformApplicationSupport>
+
+    <jcaCryptoModule>
+        <importKey keystore="../phos-dev-wrap.jks"
+            storepass="12345678"
+            alias="dev-wrap-key"
+            keypass="12345678"/>
+        <filters>
+            <filter>glob:digital/paynetics/phos/security/crypto/DH*</filter>
+            <filter>glob:digital/paynetics/phos/security/DexRandom*</filter>
+            <filter>glob:digital/paynetics/phos/security/crypto/PhosDexSignature*</filter>
+            <filter>glob:digital/paynetics/phos/security/crypto/PhosDexWrapper*</filter>
+            <filter>glob:digital/paynetics/phos/sca/ScaCryptoModule*</filter>
+        </filters>
+    </jcaCryptoModule>
+
+    <platformApplicationSupport>on</platformApplicationSupport>
+
+    <publicKeyPinning src="res/xml/network_security_config.xml">
+        <reportUri>https://api.review.phos.dev/v1/ssl-pinning</reportUri>
+    </publicKeyPinning>
+
+</dexprotector>

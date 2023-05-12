@@ -1,0 +1,342 @@
+apply plugin: 'com.android.application'
+if (!getGradle().getStartParameter().getTaskRequests().toString().contains("WithoutDexProtector")) {
+    apply plugin: 'dexprotector'
+}
+apply plugin: 'io.fabric'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+    maven {
+        url "${artifactory_phos_sdk_public_url}"
+        credentials {
+            username = "${artifactory_read_only_user}"
+            password = "${artifactory_read_only_password}"
+        }
+    }
+}
+
+android {
+
+    apply from: "$rootDir/phos-sdk/build-config/config-app-build.gradle"
+    apply from: "$rootDir/app/src/${getClientParam()}/flavor.gradle"
+
+    // FIXME There are some permission related errors reported by Lint, fix them and remove 'abortOnError'
+    lintOptions {
+        abortOnError false
+    }
+    signingConfigs {
+        // DeviceId depends on the signing config, same package signed with different key
+        // will report different id even when installed on the same device. To prevent id
+        // inconsistency all debug versions will be signed with DefaultDebugKey.
+        debugConfig {
+            keyAlias 'DefaultDebugKey'
+            keyPassword 'android'
+            storeFile file('../phos-debug-keystore.jks')
+            storePassword 'android'
+        }
+        // Password isn't committed in git. You have to set it locally.
+        // To hide local changes in keystore.properties from git, run:
+        // git update-index --skip-worktree keystore.properties
+        releaseConfig {
+            def keystorePropertiesFile = rootProject.file("keystore.properties")
+            def keystoreProperties = new Properties()
+            keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+            if (isCIBuild()) {
+                keystoreProperties['storePassword'] = System.getenv('KEYSTORE_PASSWORD')
+                keystoreProperties['releaseKeyPassword'] = System.getenv('KEYSTORE_KEY_PASSWORD')
+            }
+
+            println("Keystore: ${keystorePropertiesFile.path}")
+
+            keyAlias keystoreProperties['releaseKeyAlias']
+            keyPassword keystoreProperties['releaseKeyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+    defaultConfig {
+        applicationId "digital.paynetics.phos"
+        minSdkVersion 28
+        targetSdkVersion 31
+        versionName project.appVersionName
+        versionCode project.appVersionCode
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        missingDimensionStrategy 'environment', 'prod'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), "$rootDir/${buildProps['APP_PROGUARD_CONFIG']}"
+            signingConfig signingConfigs.releaseConfig
+        }
+        debug {
+            signingConfig signingConfigs.debugConfig
+        }
+    }
+    flavorDimensions "client"
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled true
+    }
+    packagingOptions {
+        exclude '/okhttp3/**'
+    }
+    bundle {
+        language {
+            // Disable generating APKs per language resources.
+            // Phos uses custom translation implementation.
+            enableSplit = false
+        }
+    }
+}
+
+def permissionsdispatcherVersion = '3.3.1'
+def AAVersion = '4.8.0'
+def permissionsDispatcherPluginVersion = '2.1.1'
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.lifecycle:lifecycle-process:2.2.0'
+    def nav_version = "2.5.3"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    testImplementation 'junit:junit:4.12'
+    testImplementation "org.mockito.kotlin:mockito-kotlin:4.0.0"
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.2'
+    testImplementation "com.google.truth:truth:1.1.3"
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    // firebase crashlytics
+    implementation 'com.google.firebase:firebase-core:17.5.0'
+    implementation 'com.google.firebase:firebase-crashlytics:17.2.1'
+    implementation "com.google.android.gms:play-services-safetynet:17.0.0"
+    // okhttp
+    // implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    // image loading library
+    implementation('com.squareup.picasso:picasso:2.71828') {
+        exclude group: "com.android.support", module: "exifinterface"
+    }
+    // android annotations
+    implementation "org.androidannotations:androidannotations-api:$AAVersion"
+    kapt "org.androidannotations:androidannotations:$AAVersion"
+    // fonts
+    implementation('io.github.inflationx:calligraphy3:3.1.1') {
+        exclude group: "com.android.support", module: "support-media-compat"
+    }
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+    // loading indicator
+    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
+    // chart library
+    implementation 'com.diogobernardino:williamchart:2.5.0'
+    // dagger 2
+    implementation "com.google.dagger:dagger:2.39.1"
+    kapt "com.google.dagger:dagger-compiler:2.39.1"
+
+    implementation project(':phos-sdk')
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'net.sourceforge.streamsupport:streamsupport:1.6.1'
+    implementation 'com.bolyartech.forge.android:forge-android:10.0.0'
+    implementation 'org.slf4j:slf4j-api:1.7.30'
+    implementation('com.github.tony19:logback-android-classic:1.1.1-6') {
+        // workaround issue #73
+        exclude group: 'com.google.android', module: 'android'
+    }
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation "com.github.hotchemi:permissionsdispatcher:${permissionsdispatcherVersion}"
+    kapt "com.github.hotchemi:permissionsdispatcher-processor:${permissionsdispatcherVersion}"
+    implementation "org.androidannotations:androidannotations-api:${AAVersion}"
+    kapt "org.androidannotations:androidannotations:${AAVersion}"
+    kapt "com.github.AleksanderMielczarek:AndroidAnnotationsPermissionsDispatcherPlugin:${permissionsDispatcherPluginVersion}"
+    configurations.all {
+        exclude group: 'com.android.support', module: 'support-v13'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: "com.android.support", module: "support-media-compat"
+    }
+    implementation "com.google.android.gms:play-services-location:17.1.0"
+    if (isDebugBuild()) {
+        implementation 'digital.paynetics.phos:card-reader:1.0.12'
+        implementation 'digital.paynetics.phos:kernel-common:1.0.1'
+        implementation 'digital.paynetics.phos:kernel-visa:1.0.4'
+        implementation 'digital.paynetics.phos:kernel-mastercard:1.0.1'
+        implementation 'digital.paynetics.phos:kernel-entry-point:1.0.4'
+    }
+
+    testImplementation "com.google.truth:truth:1.1.3"
+}
+
+// To build and calculate sha256 of both apk file and classes.dex, run:
+// gradlew assembleWithChecksumCalc -Ppflavor=app -Ppbuild=debug -Ppinstall=true
+// where:
+// pflavor: app, cloud, localhost, and etc.
+// pbuild: debug or release
+// pinstall: true to install the apk automatically after build
+
+def checksumPath = "$project.buildDir/backup"
+def buildVariant = createBuildVariantSuffix()
+def versionLabel = "v${androidGitVersion.name()}"
+def versionVariant = "$buildVariant-$versionLabel"
+
+String getClientParam() {
+    project.hasProperty("pclient") ? pclient : 'main'
+}
+
+String getBuildParam() {
+    project.hasProperty("pbuild") ? pbuild : 'build'
+}
+
+boolean getInstallParam() {
+    String install = project.hasProperty("pinstall") ? pinstall : false
+    install.equalsIgnoreCase('true')
+}
+
+boolean getBundleParam() {
+    String param = project.hasProperty("pbundle") ? pbundle : false
+    param.equalsIgnoreCase('true')
+}
+
+String createBuildVariantSuffix() {
+    '-' + getClientParam() + '-' + getBuildParam()
+}
+
+boolean isDebugBuild() {
+    getBuildParam().toLowerCase() == "debug"
+}
+
+boolean isCIBuild() {
+    project.hasProperty("buildType") && buildType.toLowerCase() == "ci"
+}
+
+String selectDependsOn() {
+    def bundle = getBundleParam()
+    def install = getInstallParam()
+    def nameParts = createBuildVariantSuffix()
+            .split('-')
+            .collect { it.toLowerCase().capitalize() }
+            .toList()
+    nameParts.add(0, bundle ? 'bundle' : install ? 'install' : 'assemble')
+    def dependsOnTask = nameParts.join('')
+    println "dependsOnSelector > task: $dependsOnTask, install: $install"
+    dependsOnTask
+}
+
+import org.gradle.crypto.checksum.Checksum
+
+task assembleWithChecksumCalc(type: Checksum) {
+    files = files(fileTree(checksumPath))
+    outputDir = new File(checksumPath, "/generatedChecksums")
+    algorithm = Checksum.Algorithm.SHA256
+    doLast {
+        println "SHA256 generated. Check $checksumPath"
+    }
+}
+
+task runChecksumVerifier(type: JavaExec) {
+    classpath files('../pkg_hasher/package_hasher.jar')
+    main 'digital.paynetics.sourcehashing.PackageHasher'
+}
+
+task backupApks(type: Copy) {
+    from("$project.buildDir/outputs/apk")
+    into(checksumPath)
+    include '**/*.apk'
+    rename { String fileName ->
+        def nameParts = fileName.split('-').toList()
+        // rename app with phos
+        nameParts.remove(0)
+        nameParts.add(0, 'phos')
+        // remove .apk
+        def lastPartIndex = nameParts.size() - 1
+        def lastPart = nameParts.get(lastPartIndex)
+        lastPart = lastPart.replace(".apk", "")
+        nameParts.remove(lastPartIndex)
+        nameParts.add(lastPartIndex, lastPart)
+        // add version suffix
+        nameParts.add("${versionLabel}.apk")
+
+        nameParts.join('-')
+    }
+    eachFile { file ->
+        if (file.name.endsWith("${versionVariant}.apk")) {
+            file.setRelativePath new RelativePath(true, file.name)
+        } else {
+            file.exclude()
+        }
+    }
+    includeEmptyDirs = false
+    doLast {
+        println "Apks copied. Check $checksumPath"
+    }
+}
+
+task unzipApks(type: Copy) {
+    from(zipTree("$checksumPath/phos${versionVariant}.apk"))
+    into(checksumPath)
+    include 'classes.dex'
+    rename { String fileName -> "classes${versionVariant}.dex" }
+    doLast {
+        println "Apks unzipped. Check $checksumPath"
+    }
+}
+
+task assembleWithoutDexProtector() {
+    description = "Build an apk that isn't protected with DexProtector"
+    doLast {
+        println "Apk is available at $checksumPath"
+    }
+}
+
+task assembleWithDexProtector() {
+    description = "Build an apk that is protected with DexProtector"
+    doLast {
+        println "Done"
+    }
+}
+
+task startWithoutDexProtector(type: Exec) {
+    description = "Build without DexProtector, install, and run Phos"
+    commandLine android.getAdbExe(), 'shell', 'am start -n digital.paynetics.phos/.screens.SplashActivity_'
+    doLast {
+        println "Starting Phos..."
+    }
+}
+
+startWithoutDexProtector.dependsOn assembleWithoutDexProtector
+assembleWithoutDexProtector.dependsOn selectDependsOn()
+assembleWithDexProtector.dependsOn /*runChecksumVerifier,*/ selectDependsOn()
+assembleWithChecksumCalc.dependsOn unzipApks
+unzipApks.dependsOn backupApks
+backupApks.dependsOn selectDependsOn()
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'org.owasp.dependencycheck'
+
+check.dependsOn(dependencyCheck)
+
+dependencyCheck {
+    // CVSS ranges from 0 to 10, 0 meaning fail if any vulnerabilities are found, and 10 builds regardless of all
+    failBuildOnCVSS = 0
+    failOnError = true
+}
