@@ -1,0 +1,153 @@
+<resources>
+    <string name="description_splash_logo">Splash logo</string>
+    <string name="description_splash_bottom_text">Splash bottom text</string>
+    <string name="security_check">Security check...</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login">LOG IN</string>
+    <string name="signup">New to phos? Sign up now</string>
+    <string name="password">Password</string>
+
+    <string name="err_msg_email">Invalid E-mail recipient</string>
+    <string name="err_msg_password">Invalid password</string>
+
+
+    <string name="response_code_1000">Error</string>
+    <string name="response_code_1003">Invalid credentials</string>
+    <string name="retry_msg">Error loading data\nCheck your connectivity and retry</string>
+    <string name="no_records_found_filter">No records for selected filter</string>
+    <string name="no_records_found">No records found</string>
+
+    <string name="dashboard">Dashboard</string>
+
+    <string name="day_1">Sun</string>
+    <string name="day_2">Mon</string>
+    <string name="day_3">Tue</string>
+    <string name="day_4">Wed</string>
+    <string name="day_5">Thu</string>
+    <string name="day_6">Fri</string>
+    <string name="day_7">Sat</string>
+
+    <!-- sales -->
+    <string name="transactions">Transactions</string>
+    <string name="loyalty">Loyalty</string>
+    <string name="analytics">Analytics</string>
+    <string name="open_banking">Open Banking</string>
+    <string name="monthly_sales">Monthly sales</string>
+    <string name="daily_sales">Daily sales</string>
+    <string name="settings">Settings</string>
+    <string name="printers">Printers</string>
+    <string name="btn_refund">REFUND</string>
+    <string name="btn_sale">SALE</string>
+    <string name="btn_void">VOID</string>
+    <string name="btn_make_refund">REFUND</string>
+    <string name="btn_next">NEXT</string>
+    <string name="btn_make_void">VOID</string>
+
+    <!-- transactions -->
+    <string name="date">Date</string>
+    <string name="type">Type</string>
+    <string name="status">Status</string>
+
+    <string name="type_all">All</string>
+
+    <string name="type_payment">Sale</string>
+    <string name="type_refund">Refund</string>
+    <string name="type_void">Void</string>
+
+    <string name="status_successful">Complete</string>
+    <string name="status_pending">Pending</string>
+    <string name="status_failed">Failed</string>
+    <string name="log_out">Log out</string>
+
+
+    <!-- settings -->
+    <string name="merchant_profile">Merchant profile</string>
+    <string name="company_data">Company data</string>
+    <string name="bank_account_data">Bank account data</string>
+    <string name="tariff_data">Tariff</string>
+
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="address">Address</string>
+
+    <string name="language">Language</string>
+    <string name="printers_select">Select printer …</string>
+
+
+    <string name="iban">IBAN</string>
+    <string name="bank">Bank name</string>
+    <string name="currency">Currency</string>
+
+    <!-- languages -->
+    <string name="lang_english">English</string>
+    <string name="lang_bulgarian">Bulgarian</string>
+    <string name="daily">DAILY</string>
+    <string name="weekly">WEEKLY</string>
+    <string name="monthly">MONTHLY</string>
+    <string name="net_sales">Net sales</string>
+    <string name="avg_sales">Average sale</string>
+    <string name="enter_pin1">Enter PIN</string>
+    <string name="enter_pin2">to authorize transaction</string>
+    <string name="contactless_transactions">CONTACTLESS</string>
+    <string name="ecommerce_transactions">ECOMMERCE</string>
+    <string name="open_banking_transactions">OPEN BANKING</string>
+
+    <string name="sale_success">Sale success</string>
+    <string name="void_success">Void success</string>
+    <string name="refund_success">Refund success</string>
+
+
+    <string name="phone">Phone</string>
+    <string name="mobile_phone">Mobile phone</string>
+    <string name="send_to">Send to:</string>
+    <string name="enter_email">Enter e-mail</string>
+    <string name="title_device_id">Your device id is:</string>
+
+    <string name="confirm_refund">Confirm refund</string>
+    <string name="are_you_sure_refund">Are you sure you want to make a refund for %s on this transaction?</string>
+
+    <string name="confirm_void">Confirm void</string>
+    <string name="are_you_sure_void">Are you sure you want to void this transaction?</string>
+
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+
+
+    <string name="permission_location_rationale">We need access to location permission in order to find nearby printers</string>
+    <string name="allow">Allow</string>
+    <string name="deny">Deny</string>
+
+    <string name="printing_receipt_no_printer">Printer not configured!</string>
+    <string name="printing_receipt">Printing receipt…</string>
+    <string name="printing_receipt_success">Successfully printed</string>
+    <string name="printing_receipt_failed">Could not print receipt, check printer</string>
+    <string name="change_password">Change password</string>
+    <string name="new_password">New password</string>
+    <string name="change">Change</string>
+    <string name="init_failed">Initialization failed. Please try log in again.</string>
+    <string name="change_password_hint">You have logged in successfully. To continue, you need to change your password.</string>
+    <string name="reset_password">Reset password</string>
+    <string name="reset">Reset</string>
+    <string name="reset_password_hint">Enter the email address you registered with. You will receive an email with a link to reset your password.</string>
+    <string name="password_updated">Password updated</string>
+    <string name="ok">OK</string>
+    <string name="transaction_declined">Transaction declined</string>
+    <string name="transaction_pending">Unconfirmed transaction</string>
+    <string name="transaction_above_cvm_limit">Transaction is above CVM limit. Please enter a lower amount.</string>
+    <string name="dnd_enabled_title">Limit interruptions (enabled)</string>
+    <string name="dnd_disabled_title">Limit interruptions (disabled)</string>
+    <string name="dnd_enabled_action">Revoke permission to limit interruptions with Do Not Disturb</string>
+    <string name="dnd_disabled_action">Grant permission to limit interruptions with Do Not Disturb</string>
+    <string name="authorizing">Authorizing…</string>
+    <string name="max_amount">max %s</string>
+    <string name="version_string">%s: %s</string>
+    <string name="build_number">Your mobile build number:</string>
+    <string name="build_number_explanation">To ensure the authenticity of your mobile application, please send an email to our Customer Support at support@phos.cloud with your mobile build number and they will verify it for you.
+It is important to send the email from the email account which is registered with us.</string>
+    <string name="build_number_tip">Tip: You can click and hold on the mobile build number. It will be copied automatically to your clipboard and you can paste it easily in the email.</string>
+
+    <string name="charity_1">1 %s</string>
+    <string name="charity_5">5 %s</string>
+    <string name="charity_10">10 %s</string>
+
+</resources>

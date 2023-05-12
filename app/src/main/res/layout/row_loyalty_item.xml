@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screens.LoyaltyActivity">
+
+    <data>
+
+        <import type="digital.paynetics.phos.common.GeneralBindings.OutlineType" />
+
+        <variable
+            name="state"
+            type="digital.paynetics.phos.sdk.entities.LoyaltyItem" />
+
+        <variable
+            name="actionListener"
+            type="digital.paynetics.phos.common.ActionListener" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="@{() -> actionListener.onItemClick(state)}"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            bind:url="@{state.logo}"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/app_icon" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@{state.name}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintEnd_toStartOf="@id/installed"
+            app:layout_constraintStart_toEndOf="@+id/logo"
+            app:layout_constraintTop_toTopOf="@+id/logo"
+            tools:text="Repo name" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{state.description}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/gray"
+            app:layout_constraintEnd_toEndOf="@id/name"
+            app:layout_constraintStart_toStartOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            tools:text="Short description \n second line \n third line \n and so on" />
+
+        <!-- TODO set bind:visible to "@{state.isAppType()}" to show the download button-->
+        <FrameLayout
+            android:id="@+id/installed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/name"
+            app:layout_constraintTop_toTopOf="parent"
+            bind:visible="@{false}">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Installed"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/black_alpha"
+                android:textSize="12sp"
+                bind:visible="@{state.installed}"
+                tools:text="Installed" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@color/blue_25tr"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="@{() -> actionListener.onItemClick(state, 1)}"
+                android:padding="12dp"
+                bind:color="@{@color/blue}"
+                bind:drawable="@{@drawable/ic_get_app_black_24dp}"
+                bind:outline_type="@{OutlineType.SQUIRCLE}"
+                bind:visible="@{state.showInstallOption()}"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/app_icon" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

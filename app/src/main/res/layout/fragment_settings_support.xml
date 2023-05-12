@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_bg"
+    android:orientation="vertical"
+    tools:context=".screens.SettingsActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/view_screen_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <include
+            android:id="@+id/callCard"
+            layout="@layout/row_settings_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp" />
+
+        <include
+            android:id="@+id/emailCard"
+            layout="@layout/row_settings_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp" />
+
+        <include
+            android:id="@+id/chatCard"
+            layout="@layout/row_settings_contact" />
+
+    </LinearLayout>
+
+</LinearLayout>

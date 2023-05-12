@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.TransactionsActivity">
+
+
+    <include
+        layout="@layout/phos_sdk__btn_back"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="18dp" />
+
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="@string/transactions"
+        android:textColor="@color/txtDefaultColor"
+        android:textSize="@dimen/txtDefaultSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+    <LinearLayout
+        android:id="@+id/secureTransactionsSelectorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle">
+
+        <FrameLayout
+            style="@style/Rounded.PhosButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:background="@color/transparent">
+
+
+            <View
+                android:id="@+id/selector"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/selector_bottom_blue">
+
+            </View>
+
+
+            <Button
+                android:id="@+id/buttonContactless"
+                style="@style/Rounded.PhosButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:text="@string/contactless_transactions"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/btnEvenBiggerSize" />
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/eCommerceContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:background="@color/transparent">
+
+
+            <Button
+                android:id="@+id/buttonEcommerce"
+                style="@style/Rounded.PhosButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:text="@string/ecommerce_transactions"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/btnEvenBiggerSize" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/openBankingContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:visibility="gone"
+            android:background="@color/transparent">
+
+            <Button
+                android:id="@+id/buttonOpenBanking"
+                style="@style/Rounded.PhosButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:text="@string/open_banking_transactions"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/btnEvenBiggerSize" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/lightblue"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:elevation="2dp"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secureTransactionsSelectorLayout">
+
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:background="@color/transparent"
+            android:text="@string/date"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/txtSubtitleSmaller"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnDateSelect"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+
+
+        <ImageButton
+            android:id="@+id/btnDateSelect"
+            style="@style/FlatButton"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/down_arrow_gray"
+            app:layout_constraintStart_toEndOf="@id/txtDate"
+            app:layout_constraintEnd_toStartOf="@id/txtType"/>
+
+        <TextView
+            android:id="@+id/txtType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:background="@color/transparent"
+            android:text="@string/type"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/txtSubtitleSmaller"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnTypeSelect"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnDateSelect"/>
+
+
+        <ImageButton
+            android:id="@+id/btnTypeSelect"
+            style="@style/FlatButton"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/down_arrow_gray"
+            app:layout_constraintStart_toEndOf="@id/txtType"
+            app:layout_constraintEnd_toStartOf="@id/txtStatus"/>
+
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:background="@color/transparent"
+            android:text="@string/status"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/txtSubtitleSmaller"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnStatusSelect"
+            app:layout_constraintStart_toEndOf="@id/btnTypeSelect"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/btnStatusSelect"
+            style="@style/FlatButton"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/down_arrow_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txtStatus"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transactionsList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/loadingIndicator"
+        style="@style/Loading"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="48dp"
+        android:padding="8dp"
+        android:visibility="gone"
+        app:SpinKit_Color="@color/loading_indicator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar" />
+
+
+    <TextView
+        android:id="@+id/labelCentered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+        android:text="No records found"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/txtDefaultSize"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/settings_graph"
+    app:startDestination="@id/settingsFragment">
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="digital.paynetics.phos.screens.SettingsFragment"
+        android:label="SettingsFragment">
+        <action
+            android:id="@+id/action_settings_to_changePass"
+            app:destination="@id/settingsChangePassActivity" />
+        <action
+            android:id="@+id/action_settings_to_language"
+            app:destination="@id/settingsLanguageFragment" />
+        <action
+            android:id="@+id/action_settings_to_printers"
+            app:destination="@id/settingsPrintersActivity" />
+        <action
+            android:id="@+id/action_settings_to_help"
+            app:destination="@id/settingsHelpFragment" />
+        <action
+            android:id="@+id/action_settings_to_screens"
+            app:destination="@id/settingsScreensFragment" />
+        <action
+            android:id="@+id/action_settings_to_logout"
+            app:destination="@id/settingsLogoutDialogFragment" />
+    </fragment>
+
+    <activity
+        android:id="@+id/settingsChangePassActivity"
+        android:name="digital.paynetics.phos.screens.ChangePasswordActivity_"
+        android:label="SettingsChangePassActivity" />
+
+    <fragment
+        android:id="@+id/settingsLanguageFragment"
+        android:name="digital.paynetics.phos.screens.SettingsLanguageFragment"
+        android:label="SettingsLanguageFragment" />
+
+    <activity
+        android:id="@+id/settingsPrintersActivity"
+        android:name="digital.paynetics.phos.screens.PrintersActivity_"
+        android:label="SettingsPrintersActivity" />
+
+    <fragment
+        android:id="@+id/settingsHelpFragment"
+        android:name="digital.paynetics.phos.screens.SettingsHelpFragment"
+        android:label="SettingsHelpFragment">
+        <action
+            android:id="@+id/action_settings_help_to_support"
+            app:destination="@id/settingsSupportFragment" />
+        <action
+            android:id="@+id/action_settings_help_to_appVerify"
+            app:destination="@id/settingsAppVerifyActivity" />
+        <action
+            android:id="@+id/action_settings_help_to_appVersion"
+            app:destination="@id/settingsAppVersionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsSupportFragment"
+        android:name="digital.paynetics.phos.screens.SettingsSupportFragment"
+        android:label="SettingsSupportFragment" />
+
+    <activity
+        android:id="@+id/settingsAppVerifyActivity"
+        android:name="digital.paynetics.phos.screens.BuildNumberActivity_"
+        android:label="SettingsAppVerifyActivity" />
+
+    <fragment
+        android:id="@+id/settingsAppVersionFragment"
+        android:name="digital.paynetics.phos.screens.SettingsAppVersionFragment"
+        android:label="SettingsAppVersionFragment" />
+
+    <fragment
+        android:id="@+id/settingsScreensFragment"
+        android:name="digital.paynetics.phos.screens.SettingsScreensFragment"
+        android:label="SettingsScreensFragment" />
+
+    <dialog
+        android:id="@+id/settingsLogoutDialogFragment"
+        android:name="digital.paynetics.phos.screens.SettingsLogoutDialogFragment"
+        android:label="SettingsLogoutDialogFragment" />
+
+</navigation>

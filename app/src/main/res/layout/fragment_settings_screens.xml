@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_bg"
+    android:orientation="vertical"
+    tools:context=".screens.SettingsActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/view_screen_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:id="@+id/screensCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:paddingVertical="16dp">
+
+            <include
+                android:id="@+id/tipRow"
+                layout="@layout/row_settings_toggle" />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@color/grey_bg" />
+
+            <include
+                android:id="@+id/refInfoRow"
+                layout="@layout/row_settings_toggle" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

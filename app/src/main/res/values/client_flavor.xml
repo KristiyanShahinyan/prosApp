@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Phos</string>
+    <string name="signup_url"></string>
+
+    <bool name="show_settings_bank">false</bool>
+    <bool name="show_settings_tariff">false</bool>
+
+    <bool name="align_buttons_horizontally">false</bool>
+
+    <drawable name="app_loading">@drawable/app_loading_phos</drawable>
+    <drawable name="app_icon">@drawable/app_icon_phos</drawable>
+    <drawable name="app_logo">@drawable/app_logo_phos</drawable>
+    <drawable name="ic_sales">@drawable/ic_euro</drawable>
+    <!-- receipt_test_logo needs to be in PNG format -->
+    <drawable name="receipt_test_logo">@drawable/printer</drawable>
+
+    <drawable name="default_sales_icon">@drawable/ic_euro</drawable>
+    <!-- If true sales icon will be set based on the currency -->
+    <bool name="dynamic_sales_icon_enabled">true</bool>
+
+    <integer name="view_visible">0</integer>
+    <integer name="view_invisible">1</integer>
+    <integer name="view_gone">2</integer>
+    <integer name="company_name_visibility">@integer/view_visible</integer>
+    <integer name="loyalty_button_visibility">@integer/view_invisible</integer>
+
+    <string name="font_path_regular">fonts/RobotoRegular.ttf</string>
+    <string name="font_path_bold">fonts/RobotoBold.ttf</string>
+    <string name="font_path_italic">fonts/RobotoItalic.ttf</string>
+    <string name="font_path_bolditalic">fonts/RobotoBoldItalic.ttf</string>
+
+    <bool name="apply_dynamic_whitelabel">false</bool>
+    <bool name="show_merchant_name">true</bool>
+    <bool name="predefined_amounts">false</bool>
+    <bool name="dynamic_sales_screen">false</bool>
+    <bool name="analytics_color_anim_enabled">true</bool>
+    <bool name="void_enabled">true</bool>
+    <bool name="refund_enabled">true</bool>
+    <bool name="show_dashboard_title">true</bool>
+
+    <string name="send_message_prefix">+</string>
+    <!--
+        Check phos-sdk/client_flavor.xml for info.
+        Disabled for all clients by default.
+    -->
+    <string name="retry_codes"></string>
+
+    <string name="support_phone"></string>
+    <string name="support_email"></string>
+    <string name="support_chat_url"></string>
+    <string name="faq_url"></string>
+</resources>

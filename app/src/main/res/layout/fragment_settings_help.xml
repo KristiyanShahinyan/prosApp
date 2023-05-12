@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_bg"
+    android:orientation="vertical"
+    tools:context=".screens.SettingsActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/view_screen_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:id="@+id/supportCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:paddingVertical="16dp">
+
+            <include
+                android:id="@+id/supportRow"
+                layout="@layout/row_settings_nav"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@color/grey_bg" />
+
+            <include
+                android:id="@+id/faqRow"
+                layout="@layout/row_settings_nav"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/appInfoCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:paddingVertical="16dp">
+
+            <include
+                android:id="@+id/versionRow"
+                layout="@layout/row_settings_nav"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@color/grey_bg" />
+
+            <include
+                android:id="@+id/verifyRow"
+                layout="@layout/row_settings_nav"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

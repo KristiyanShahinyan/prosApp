@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/version"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="4dp">
+
+    <FrameLayout
+        android:id="@+id/leadingIconBackground"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@drawable/card_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/leadingIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/app_icon" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/SettingsAppVersionName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/leadingIconBackground"
+        app:layout_constraintTop_toTopOf="@id/leadingIconBackground"
+        tools:text="Title" />
+
+    <TextView
+        android:id="@+id/hint"
+        style="@style/SettingsAppVersionCode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/leadingIconBackground"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:text="Hint" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

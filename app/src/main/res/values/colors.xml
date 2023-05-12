@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#418bed</color>
+    <color name="colorPrimaryDark">#2e6cbe</color>
+    <color name="colorAccent">#000000</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="black">#000000</color>
+    <color name="black_alpha">#30000000</color>
+    <color name="shadow">#10000000</color>
+    <color name="gray">#757575</color>
+    <color name="gray2">#707070</color>
+    <color name="gray3">#4d4f5c</color>
+    <color name="gray3_42tr">#B2B3B9</color>
+    <color name="gray4">#232323</color>
+    <color name="gray5">#9C9CA6</color>
+
+    <color name="greyish_brown">#4d4d4d</color>
+
+    <color name="blue">@color/colorPrimary</color>
+    <color name="blue_25tr">#E6F0FC</color>
+    <color name="lightblue">#f5f9fe</color>
+
+    <color name="red">#e34b4b</color>
+    <color name="yellow">#ffdd21</color>
+
+    <color name="almostBlack">#242424</color>
+    <color name="almostBlack2">#2f2f2f</color>
+
+    <color name="row_payment">#FFFFFF</color>
+    <color name="row_refund">#3fffdd21</color>
+    <color name="row_void">#3fe34b4b</color>
+
+
+    <color name="loading_indicator">#8FBBF4</color>
+
+
+    <color name="red_pressed">#D82222</color>
+    <color name="red_disabled">#F6CECE</color>
+
+    <color name="blue_enabled">@color/blue</color>
+    <color name="blue_disabled">#C8DDF9</color>
+    <color name="blue_pressed">#1361C8</color>
+
+    <color name="green_weird">#4de597</color>
+
+    <color name="text_color_hint">@color/gray</color>
+    <color name="sales_yellow_button_enabled">@color/yellow</color>
+    <color name="sales_yellow_button_disabled">@color/yellow_disabled</color>
+    <color name="editbox_background_tint_color">@color/black</color>
+
+    <color name="circleButtonSolidColor">@color/gray</color>
+    <color name="circleButtonStrokeColor">@color/gray</color>
+
+    <color name="transactions_btn_color">@color/gray</color>
+    <color name="transactions_date_color">@color/blue</color>
+    <color name="transactions_sum_color">@color/gray3</color>
+    <color name="analytics_chart_labels_color">@color/gray3_42tr</color>
+    <color name="analytics_primary">@color/colorPrimary</color>
+    <color name="void_red">@color/red</color>
+    <color name="refund_yellow">@color/yellow</color>
+
+    <color name="ic_settings">#757575</color>
+
+</resources>

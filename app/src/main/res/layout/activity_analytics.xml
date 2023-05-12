@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.AnalyticsActivity">
+
+
+    <include
+        layout="@layout/phos_sdk__btn_back"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="18dp" />
+
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="@string/analytics"
+        android:textColor="@color/txtDefaultColor"
+        android:textSize="@dimen/txtDefaultSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle">
+
+        <RelativeLayout
+            style="@style/Rounded.PhosButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:background="@color/transparent">
+
+
+            <View
+                android:id="@+id/selector"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/selector_bottom_blue">
+
+            </View>
+
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/Rounded.PhosButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:text="@string/daily"
+                android:textColor="@color/transactions_btn_color"
+                android:textSize="@dimen/btnEvenBiggerSize" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:background="@color/transparent">
+
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/Rounded.PhosButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:text="@string/weekly"
+                android:textColor="@color/transactions_btn_color"
+                android:textSize="@dimen/btnEvenBiggerSize" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            style="@style/Rounded.PhosButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:background="@color/transparent">
+
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/Rounded.PhosButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:text="@string/monthly"
+                android:textColor="@color/transactions_btn_color"
+                android:textSize="@dimen/btnEvenBiggerSize" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/lightblue"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:elevation="2dp"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+
+        <ImageButton
+            android:id="@+id/btnPrev"
+            style="@style/FlatButton"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layoutDirection="ltr"
+            android:src="@drawable/arrow_left_blue"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txtDate"
+            style="@style/FlatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="0dp"
+            android:text="18 April, 2018"
+            android:textColor="@color/transactions_date_color"
+            android:textSize="@dimen/txtTitleSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnNext"
+            style="@style/FlatButton"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layoutDirection="ltr"
+            android:src="@drawable/arrow_right_blue"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:id="@+id/scroll1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/infoRow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="10dp">
+
+
+                <LinearLayout
+                    android:id="@+id/box1"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="10"
+                    android:background="@drawable/sales_segmented_control"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:translationZ="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/labelNetSales"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/net_sales"
+                        android:textColor="@color/analytics_primary"
+                        android:textSize="@dimen/txtSuperSmall2"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lblNetSales"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="€ 9,999.99"
+                        android:textColor="@color/transactions_sum_color"
+                        android:textSize="@dimen/txtSettingsSize" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/infoRow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/infoRow1">
+
+                <LinearLayout
+                    android:id="@+id/box2"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="10"
+                    android:background="@drawable/sales_segmented_control"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:translationZ="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/labelAverageSale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/avg_sales"
+                        android:textColor="@color/analytics_primary"
+                        android:textSize="@dimen/txtSuperSmall2"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lblAverageSale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="€ 0,000.00"
+                        android:textColor="@color/transactions_sum_color"
+                        android:textSize="@dimen/txtSettingsSize" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/box3"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="10"
+                    android:background="@drawable/sales_segmented_control"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:translationZ="2dp">
+
+                    <TextView
+                        android:id="@+id/labelSales"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sales"
+                        android:textColor="@color/analytics_primary"
+                        android:textSize="@dimen/txtSuperSmall2"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lblSales"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="999"
+                        android:textColor="@color/transactions_sum_color"
+                        android:textSize="@dimen/txtSettingsSize" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/infoRow3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/infoRow2">
+
+
+                <LinearLayout
+                    android:id="@+id/box4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="10"
+                    android:background="@drawable/sales_segmented_control"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:translationZ="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+
+                    <com.db.chart.view.BarChartView xmlns:chart="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/chartDaily"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_margin="10dp"
+                        chart:chart_barSpacing="7dp" />
+
+                    <com.db.chart.view.BarChartView xmlns:chart="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/chartWeekly"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_margin="10dp"
+                        chart:chart_barSpacing="7dp" />
+
+
+                    <digital.paynetics.phos.screens.views.PhosLineChartView xmlns:chart="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/chartMonthly"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_margin="10dp"
+                        chart:chart_barSpacing="7dp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/loadingIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white_alpha"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/loadingView"
+            style="@style/Loading"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="48dp"
+            app:SpinKit_Color="@color/loading_indicator" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/labelCentered"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="48dp"
+        android:background="@color/white_alpha"
+        android:gravity="center"
+        android:text="@string/no_records_found"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/txtDefaultSize"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

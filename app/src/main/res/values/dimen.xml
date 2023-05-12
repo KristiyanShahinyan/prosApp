@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="txtDefaultSize">20sp</dimen>
+    <dimen name="txtNumericButtonSize">29sp</dimen>
+    <dimen name="txtTitleSize">24sp</dimen>
+    <dimen name="txtSubtitleSize">17sp</dimen>
+    <dimen name="txtSubtitleSmaller">16sp</dimen>
+    <dimen name="txtSuperSmall">12sp</dimen>
+    <dimen name="txtSuperSmall2">13sp</dimen>
+    <dimen name="txtSettingsSize">18sp</dimen>
+    <dimen name="txtSettingsSubTitleSize">15sp</dimen>
+    <dimen name="txtSettingsSubTextSize">20sp</dimen>
+    <dimen name="txtPriceSize">51sp</dimen>
+    <dimen name="txtAmountSize">40sp</dimen>
+
+    <dimen name="btnDefaultSize">14sp</dimen>
+    <dimen name="btnSlightlyBiggerSize">15sp</dimen>
+    <dimen name="btnEvenBiggerSize">16sp</dimen>
+    <dimen name="btnSmallSize_UNUSED">12sp</dimen>
+
+    <dimen name="logoSize">40dp</dimen>
+
+    <dimen name="border">0.2px</dimen>
+    <dimen name="horizontal_keypad_outer_spacing">44dp</dimen>
+    <dimen name="horizontal_keypad_button_spacing">18dp</dimen>
+    <dimen name="vertical_keypad_button_spacing">10dp</dimen>
+</resources>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vg__present_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/phos_sdk__btn_back"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="18dp" />
+
+    <LinearLayout
+        android:id="@+id/nfc_marker"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:background="@drawable/circle_payment_screen"
+        android:elevation="2dp"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:padding="2dp"
+        android:translationZ="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBack">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:src="@drawable/tap_to_pay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="Tap your phone or card\nto pay"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txtSubtitleSmaller" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/labelAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/amount"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txtDefaultSize"
+        app:layout_constraintBottom_toTopOf="@+id/tv_amount_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nfc_marker" />
+
+    <TextView
+        android:id="@+id/tv_amount_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="€123.00"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txtAmountSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelAmount" />
+
+    <ImageView
+        android:id="@+id/iv_company_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/logoSize"
+        android:maxHeight="66dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_company_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_amount_value"
+        app:layout_constraintVertical_bias="0.7"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/app_logo" />
+
+    <TextView
+        android:id="@+id/tv_company_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Reward Labs"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txtTitleSize"
+        app:layout_constraintBottom_toTopOf="@+id/cards"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_company_logo" />
+
+    <LinearLayout
+        android:id="@+id/cards"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="35dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_visa_logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_mastercard_logo" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

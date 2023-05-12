@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_bg"
+    android:orientation="vertical"
+    tools:context=".screens.SettingsActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/view_screen_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/languages"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="24dp"
+            app:selectionRequired="true"
+            app:singleSelection="true" />
+
+        <Button
+            android:id="@+id/save"
+            style="@style/SettingsSaveButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="24dp"
+            tools:text="Save Changes" />
+
+    </LinearLayout>
+
+</LinearLayout>
