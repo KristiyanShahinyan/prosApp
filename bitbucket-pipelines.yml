@@ -1,0 +1,55 @@
+image: androidsdk/android-30
+
+pipelines:
+  custom:
+    custom-parameterized-build:
+      - variables:
+        - name: Client
+          default: phos
+        - name: Environment
+          default: stage
+        - name: Build
+          default: release
+        - name: BuildConfig
+          default: build.pull-request.properties
+      - step:
+          size: 2x
+          name: Parameterized Build
+          caches:
+            - gradle
+          script:
+            - "./gradlew clean assembleWithDexProtector -PbuildType=ci -Ppclient=$Client -Ppenv=$Environment -Ppbuild=$Build -PpbuildProps=phos-sdk/build-config/$BuildConfig"
+          artifacts:
+            - app/build/outputs/**
+
+  pull-requests:
+    '{feature/*,bugfix/*,no_jira}':
+      - step:
+          size: 2x
+          name: Phos Stage Release
+          caches:
+            - gradle
+          script:
+            - ./gradlew clean assembleWithDexProtector -PbuildType=ci -Ppclient=phos -Ppenv=stage -Ppbuild=release -PpbuildProps=phos-sdk/build-config/build.pull-request.properties
+          artifacts:
+            - app/build/outputs/**
+
+  branches:
+    develop:
+      # TODO run unit tests
+      # - step:
+      #   name: Phos Stage Debug Unit Tests
+      #   caches:
+      #      - gradle
+      #   script:
+      #     - ./gradlew testPhosStageDebugUnitTest
+      - step:
+          size: 2x
+          name: Phos Stage Release
+          caches:
+            - gradle
+          script:
+            - ./gradlew clean assembleWithDexProtector -PbuildType=ci -Ppclient=phos -Ppenv=stage -Ppbuild=release -PpbuildProps=phos-sdk/build-config/build.pull-request.properties
+          artifacts:
+            - app/build/outputs/**
+

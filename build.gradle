@@ -1,0 +1,174 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    apply from: 'phos-sdk/build-config/load-build-props.gradle'
+    ext.kotlin_version = '1.5.31'
+    repositories {
+
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://maven.fabric.io/public' }
+        flatDir { dirs "${buildProps['SDK_DEXPROTECTOR_HOME']}" }
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.android.tools.build:gradle:4.1.3'
+        classpath 'com.google.gms:google-services:4.3.5'
+        classpath 'io.fabric.tools:gradle:1.28.0'
+        classpath ':dexprotector-gradle-plugin'
+        classpath ':dexprotector'
+        classpath 'org.owasp:dependency-check-gradle:5.3.2.1'
+        classpath 'org.jfrog.buildinfo:build-info-extractor-gradle:4.15.2'
+        classpath 'com.kezong:fat-aar:1.3.4'
+    }
+}
+
+plugins {
+    id 'com.gladed.androidgitversion' version '0.4.9'
+    id 'org.gradle.crypto.checksum' version '1.2.0'
+}
+
+allprojects {
+    apply plugin: 'com.jfrog.artifactory'
+    apply plugin: 'maven-publish'
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "${artifactory_phos_sdk_url}"
+            credentials {
+                username = "${artifactory_user}"
+                password = "${artifactory_password}"
+            }
+        }
+    }
+}
+
+artifactoryPublish.skip = true
+
+project('phos-sdk:security') {
+    artifactoryPublish.dependsOn('build')
+    publishing {
+        publications {
+            aar(MavenPublication) {
+                groupId = 'digital.paynetics.phos'
+                artifactId = 'security'
+                version = '1.0.0'
+                artifact("$buildDir/outputs/aar/security-release.aar")
+                pom.withXml {
+                    final dependenciesNode = asNode().appendNode('dependencies')
+
+                    ext.addDependency = { Dependency dep, String scope ->
+                        if (dep.group == null || dep.version == null || dep.name == null || dep.name == "unspecified")
+                            return // ignore invalid dependencies
+
+                        final dependencyNode = dependenciesNode.appendNode('dependency')
+                        dependencyNode.appendNode('groupId', dep.group)
+                        dependencyNode.appendNode('artifactId', dep.name)
+                        dependencyNode.appendNode('version', dep.version)
+                        dependencyNode.appendNode('scope', scope)
+
+                        if (!dep.transitive) {
+                            // If this dependency is transitive, we should force exclude
+                            // all of its dependencies from the POM
+                            final exclusionNode = dependencyNode.appendNode('exclusions').appendNode('exclusion')
+                            exclusionNode.appendNode('groupId', '*')
+                            exclusionNode.appendNode('artifactId', '*')
+                        } else if (!dep.properties.excludeRules.empty) {
+                            // Otherwise add specified exclude rules
+                            final exclusionNode = dependencyNode.appendNode('exclusions').appendNode('exclusion')
+                            dep.properties.excludeRules.each { ExcludeRule rule ->
+                                exclusionNode.appendNode('groupId', rule.group ?: '*')
+                                exclusionNode.appendNode('artifactId', rule.module ?: '*')
+                            }
+                        }
+                    }
+                    // Map all gradle dependencies to maven dependencies (the compile dependency of gradle is only
+                    // present to support legacy gradle build files)
+                    configurations.compile.getAllDependencies().each { dep -> addDependency(dep, "compile") }
+                    configurations.api.getAllDependencies().each { dep -> addDependency(dep, "compile") }
+                    configurations.implementation.getAllDependencies().each { dep -> addDependency(dep, "runtime") }
+                }
+            }
+        }
+    }
+
+    artifactoryPublish {
+        publications(publishing.publications.aar)
+    }
+}
+
+project('phos-sdk-dependencies') {
+    artifactoryPublish.dependsOn('build')
+    publishing {
+        publications {
+            aar(MavenPublication) {
+                groupId = 'digital.paynetics.phos'
+                artifactId = 'sdk-dependencies'
+                version = '1.0.3'
+                artifact("$buildDir/outputs/aar/${project.getName()}-release.aar")
+                pom.withXml {
+                    final dependenciesNode = asNode().appendNode('dependencies')
+
+                    ext.addDependency = { Dependency dep, String scope ->
+                        if (dep.group == null || dep.version == null || dep.name == null || dep.name == "unspecified")
+                            return // ignore invalid dependencies
+
+                        final dependencyNode = dependenciesNode.appendNode('dependency')
+                        dependencyNode.appendNode('groupId', dep.group)
+                        dependencyNode.appendNode('artifactId', dep.name)
+                        dependencyNode.appendNode('version', dep.version)
+                        dependencyNode.appendNode('scope', scope)
+
+                        if (!dep.transitive) {
+                            // If this dependency is transitive, we should force exclude
+                            // all of its dependencies from the POM
+                            final exclusionNode = dependencyNode.appendNode('exclusions').appendNode('exclusion')
+                            exclusionNode.appendNode('groupId', '*')
+                            exclusionNode.appendNode('artifactId', '*')
+                        } else if (!dep.properties.excludeRules.empty) {
+                            // Otherwise add specified exclude rules
+                            final exclusionNode = dependencyNode.appendNode('exclusions').appendNode('exclusion')
+                            dep.properties.excludeRules.each { ExcludeRule rule ->
+                                exclusionNode.appendNode('groupId', rule.group ?: '*')
+                                exclusionNode.appendNode('artifactId', rule.module ?: '*')
+                            }
+                        }
+                    }
+                    // Map all gradle dependencies to maven dependencies (the compile dependency of gradle is only
+                    // present to support legacy gradle build files)
+                    configurations.compile.getAllDependencies().each { dep -> addDependency(dep, "compile") }
+                    configurations.api.getAllDependencies().each { dep -> addDependency(dep, "compile") }
+                    configurations.implementation.getAllDependencies().each { dep -> addDependency(dep, "runtime") }
+                }
+            }
+        }
+    }
+
+    artifactoryPublish {
+        publications(publishing.publications.aar)
+    }
+}
+
+artifactory {
+    contextUrl = "${artifactory_contextUrl}"
+    publish {
+        repository {
+            repoKey = 'phos-sdk'
+//            repoKey = 'phos-sdk-dependencies'
+            username = "${artifactory_user}"
+            password = "${artifactory_password}"
+        }
+        defaults {
+            publishArtifacts = true
+            // Properties to be attached to the published artifacts.
+            //properties = ['qa.level': 'basic', 'dev.team' : 'core']
+            publishPom = true
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

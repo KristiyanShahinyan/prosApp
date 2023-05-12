@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- IMPORTANT: Note that when doing changes to the config, they should either be manually applied
+    to the .versions file, or it should be deleted so it would be regenerated with the changes.-->
+
+<root>
+    <packages>
+        <package>
+            <path>/phos-sdk/src/main/java/digital/paynetics/phos/security/</path>
+            <name>digital.paynetics.phos.security</name>
+        </package>
+        <package>
+            <path>/phos-sdk/src/main/java/digital/paynetics/phos/security/checks</path>
+            <name>digital.paynetics.phos.security.checks</name>
+        </package>
+        <package>
+            <path>/phos-sdk/src/main/java/digital/paynetics/phos/security/crypto</path>
+            <name>digital.paynetics.phos.security.crypto</name>
+        </package>
+        <package>
+            <path>/phos-sdk/src/main/java/digital/paynetics/phos/sdk</path>
+            <name>digital.paynetics.phos.sdk</name>
+        </package>
+        <package>
+            <path>/phos-sdk/src/main/res/raw</path>
+            <name>resources</name>
+        </package>
+        <package>
+            <path>/phos-sdk/src/main/assets</path>
+            <name>assets</name>
+        </package>
+
+        <!-- Submodules -->
+        <package>
+            <path>/submodules/card-reader/phos_reader/src/main/java/digital/paynetics/phos/app/</path>
+            <name>card-reader</name>
+        </package>
+        <package>
+            <path>/submodules/kernel-common/src/main/java/digital/paynetics/phos/kernel/common/</path>
+            <name>kernel-common</name>
+        </package>
+        <package>
+            <path>/submodules/kernel-entry-point/src/main/java/digital/paynetics/phos/entry_point/</path>
+            <name>kernel-entry-point</name>
+        </package>
+        <package>
+            <path>/submodules/kernel-mastercard/src/main/java/digital/paynetics/phos/kernel/mastercard/</path>
+            <name>kernel-mastercard</name>
+        </package>
+        <package>
+            <path>/submodules/kernel-visa/src/main/java/digital/paynetics/phos/kernel/visa/</path>
+            <name>kernel-visa</name>
+        </package>
+        <package>
+            <path>/submodules/security/src/main/java/digital/paynetics/pinpad_security/</path>
+            <name>security</name>
+        </package>
+    </packages>
+</root>

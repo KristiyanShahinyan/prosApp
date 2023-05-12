@@ -1,0 +1,5 @@
+// use keytool or Key Store Explorer app
+keytool -genkeypair -alias PHOS-DEV -keyalg RSA -keysize 2048 -validity 365 -storepass 12345678 -keypass 12345678 -keystore "C:\Users\borislav.kalaydzhiev\AndroidStudioProjects\phos\android_phos\phos-dev.jks"
+keytool -export -alias PHOS-DEV -keystore "C:\Users\borislav.kalaydzhiev\AndroidStudioProjects\phos\android_phos\phos-dev.jks" -file "C:\Users\borislav.kalaydzhiev\AndroidStudioProjects\phos\android_phos\phos-dev.cert"
+keytool -exportcert -alias PHOS-DEV -keystore "C:\Users\borislav.kalaydzhiev\AndroidStudioProjects\phos\android_phos\phos-dev.jks" -file "C:\Users\borislav.kalaydzhiev\AndroidStudioProjects\phos\android_phos\phos-dev.pem" -rfc
+openssl x509 -inform pem -pubkey -in "C:\Users\borislav.kalaydzhiev\AndroidStudioProjects\phos\android_phos\phos-dev.pem"

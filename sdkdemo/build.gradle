@@ -1,0 +1,99 @@
+plugins {
+    id 'com.android.application'
+}
+
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+}
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "digital.paynetics.phos.demo"
+        minSdkVersion 27
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        // DeviceId depends on the signing config, same package signed with different key
+        // will report different id even when installed on the same device. To prevent id
+        // inconsistency all debug versions will be signed with DefaultDebugKey.
+        debug {
+            keyAlias 'DefaultDebugKey'
+            keyPassword 'android'
+            storeFile file('../phos-debug-keystore.jks')
+            storePassword 'android'
+        }
+
+        release {
+            keyAlias 'sdk-demo'
+            keyPassword 'demo123'
+            storeFile file('sdk-demo-key.jks')
+            storePassword 'demo123'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    flavorDimensions "environment"
+
+    productFlavors {
+
+        prod {
+            dimension "environment"
+        }
+
+        stage {
+            dimension "environment"
+        }
+
+        app {
+            dimension "environment"
+        }
+
+        mock {
+            dimension "environment"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        doNotStrip "*/**/*.so"
+    }
+}
+
+repositories {
+    maven { url "https://repo.phos.dev/artifactory/phos-sdk-dependencies" }
+}
+
+dependencies {
+    implementation 'com.google.android.material:material:1.3.0'
+//    implementation files('libs/phos-sdk-release.aar')
+    implementation project (':phos-sdk')
+    implementation ('digital.paynetics.phos:sdk-dependencies:1.0.3') {
+        // exclude if your project defines android support libraries and you get errors from duplicate classes
+        exclude group: "com.android.support"
+    }
+}

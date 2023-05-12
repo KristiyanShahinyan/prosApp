@@ -1,0 +1,76 @@
+ 00. Password for tempKeyStore is: 12345678
+ 01. Google Play check is disabled at the moment and should stay like this, until it's in Google Play.
+
+ 1. Prevent screen captures ( 1 of 2 ):
+
+    a) On the pinpad project, SECURE FLAG is set, thus preventing default screen capture. OK
+    b) Further implement something similar to ASS ( https://github.com/SinsangMarket/ASS )
+        or RxScreenDetector ( https://github.com/Piasy/RxScreenshotDetector )
+
+
+ 2. Do not store the PIN in plain text. OK
+
+    a) every time the pin pad activity is initialized, a new public/private keys are created and stored in
+    Android Keystore. The pin is kept encoded all the time and updated on each keypress.
+    It's being decoded and re-encoded with the parent's public key at the end.
+
+ 3. Mask fully the PIN number display, don't show numbers at all. OK
+
+ 4. PIN entry must not rely on system keyboard. OK
+
+ 5. There should be no visual feedback which keys are pressed. OK
+
+    a) The button's background gives no indication for the pressed state.
+
+ 6. Root detection ( 1 of 2 ):
+
+    a) Generic rooted device detection with Root Beer. OK
+    b) Extra rooted devices detection (own methods)
+    c) If detected first time, store detection state and next time don't even check. OK
+        This prevents the cases where the user starts the app, sees it does not run, hides the root and tries again.
+        They need to clear the data in order to pass this check.
+
+ 7. Check if package is installed from Google Play. OK
+
+
+ 8. Implement SafetyNetAPI (not yet). Not mandatory, as it's easily avoidable with Magisk.
+
+
+ 9. Detect switching between apps. OK
+
+
+10. Debugger detection. OK ( can be improved further )
+
+    a) DEBUGGABLE flag
+    b) Standard debug build
+    c) Detect debugger slowing down the execution
+
+    d) Run anti-debug code that constantly prevents from attaching debuggers ( not working properly, disabled for now )
+
+11. Emulator detection works. Library used: https://github.com/framgia/android-emulator-detector. OK
+
+12. Debugger attaching protection
+
+    a) Frida ( start with frida-trace -i open -U -f paynetics.digital.pinpad_app ) - detection on default port only,
+        can be improved. OK
+
+    b)
+
+
+13. Integrity check
+
+    a) classes.dex CRC, OK.
+
+14. Fullscreen check. OK.
+
+    a) Tested on Pixel 2 with split-screen functionality. Should work for everything, as long as the pin pad activity
+        has no action bars or other elements
+
+15. Invisible views over pin pad - tapjacking - OK.
+
+
+16. Code is obfuscated with ProGuard
+
+
+
+

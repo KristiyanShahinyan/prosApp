@@ -1,0 +1,17 @@
+include ':app',
+        ':phos-sdk',
+        ':phos-sdk:card-reader',
+        ':phos-sdk:kernel-entry-point',
+        ':phos-sdk:kernel-mastercard',
+        ':phos-sdk:kernel-common',
+        ':phos-sdk:kernel-visa',
+        ':phos-sdk:security',
+        ':sdkdemo',
+        ':themis',
+        ':phos-sdk-dependencies'
+project(':phos-sdk:card-reader').projectDir = new File(rootDir, 'submodules/card-reader/phos_reader')
+project(':phos-sdk:kernel-entry-point').projectDir = new File(rootDir, 'submodules/kernel-entry-point')
+project(':phos-sdk:kernel-mastercard').projectDir = new File(rootDir, 'submodules/kernel-mastercard')
+project(':phos-sdk:kernel-common').projectDir = new File(rootDir, 'submodules/kernel-common')
+project(':phos-sdk:kernel-visa').projectDir = new File(rootDir, 'submodules/kernel-visa')
+project(':phos-sdk:security').projectDir = new File(rootDir, 'submodules/security')
